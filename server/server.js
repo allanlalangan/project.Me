@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: false }))
 
 // ROUTES
 app.use('/api/goals', require('./routes/goalRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
 
 // FALLBACK ROUTE
 app.use('*', (req, res) => {
