@@ -18,6 +18,21 @@ const NewGoalForm = (props) => {
         placeholder='I want to...'
         className={styles['new-goal-input']}
       />
+      <label htmlFor='duedate'>Due by:</label>
+      <input
+        className={styles.duedate}
+        type='datetime-local'
+        name='duedate'
+        id='duedate'
+      />
+      <label htmlFor='notes'>Notes</label>
+      <textarea
+        className={styles['notes']}
+        name='notes'
+        id='notes'
+        cols='30'
+        rows='10'
+      ></textarea>
       <Button type='submit'>Add Goal</Button>
     </form>
   )

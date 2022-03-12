@@ -7,11 +7,13 @@ import Goals from './components/Goals/Goals'
 const App = () => {
   const [userLoggedIn, setUserLoggedIn] = useState(true)
   return (
-    <main>
+    <>
       <Header />
-      {!userLoggedIn && <Login />}
-      <Goals />
-    </main>
+      <main>
+        {!userLoggedIn && <Login />}
+        {userLoggedIn && <Goals />}
+      </main>
+    </>
   )
 }
 

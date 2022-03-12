@@ -4,7 +4,7 @@ import NewGoalForm from './NewGoalForm'
 
 const NewGoal = () => {
   return (
-    <div>
+    <div className={styles['new-goal']}>
       <h3>Set a new goal</h3>
       <NewGoalForm />
     </div>
