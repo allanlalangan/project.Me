@@ -1,12 +1,16 @@
-import './App.css'
+import React from 'react'
 
-function App() {
+import Header from './components/Layout/Header'
+import Login from './components/Login/Login'
+import Goals from './components/Goals/Goals'
+
+const App = () => {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <h1>Personal Dashboard</h1>
-      </header>
-    </div>
+    <main>
+      <Header />
+      <Login />
+      <Goals />
+    </main>
   )
 }
 

@@ -1,0 +1,11 @@
+.goals-heading {
+  color: var(--prim-color);
+}
+
+.goals-container {
+  width: 50vw;
+  height: 75vh;
+
+  background-color: var(--ter-color);
+  border-radius: 1rem;
+}
