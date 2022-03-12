@@ -1,0 +1,16 @@
+.main-nav {
+  width: 100%;
+}
+
+.main-nav ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.main-nav li {
+  font-family: 'Lemon', cursive;
+  list-style: none;
+  padding: 0 1rem;
+}

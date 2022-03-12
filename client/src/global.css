@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Lemon&display=swap');
 :root {
-  --prim-color: #282c34;
-  --sec-color: #61dafb;
-  --ter-color: aliceblue;
+  --prim-color: hsla(10, 15%, 20%, 1);
+  --sec-color: hsla(30, 100%, 70%, 1);
+  --ter-color: hsla(44, 100%, 90%, 1);
+  --opaque: hsla(51, 100%, 75%, 0.6);
 }
 
 * {
@@ -19,6 +21,14 @@ body {
   background-color: var(--prim-color);
 }
 
+main {
+  padding: 1rem;
+}
+
+h1,
+h2 {
+  font-family: 'Lemon', cursive;
+}
 section {
   margin-bottom: 1.5rem;
 }
