@@ -14,34 +14,45 @@ const getGoals = async (req, res) => {
 // @access Private
 const setGoal = async (req, res) => {
   const newGoal = await new Goal(req.body)
-  await newGoal.save()
-  await res
-    .status(200)
-    .json({ message: `'${newGoal.title}' added as a new goal` })
+
+  try {
+    await newGoal.save()
+    await res
+      .status(201)
+      .json({ message: `'${newGoal.title}' added as a new goal` })
+  } catch (error) {
+    res.status(500).send(error)
+  }
 }
 
 // @desc Update goal
 // @route PUT /api/goals/:id
 // @access Private
 const updateGoal = async (req, res) => {
-  // NEEDS ERROR HANDLER
   const goal = await Goal.findById(req.params.id)
   const updatedGoal = await Goal.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
   })
 
-  await res.status(200).json(updatedGoal)
+  try {
+    await res.status(200).json(updatedGoal)
+  } catch (error) {
+    res.status(500).send(error)
+  }
 }
 
 // @desc Remove goal
 // @route DELETE /api/goals/:id
 // @access Private
 const deleteGoal = async (req, res) => {
-  // NEEDS ERROR HANDLER
   const goal = await Goal.findById(req.params.id)
 
-  await goal.remove()
-  await res.status(200).json({ message: `Deleted Goal ${req.params.id}` })
+  try {
+    await goal.remove()
+    await res.status(200).json({ message: `Deleted Goal ${req.params.id}` })
+  } catch (error) {
+    res.status(500).send(error)
+  }
 }
 
 module.exports = {
