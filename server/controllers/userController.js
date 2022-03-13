@@ -2,6 +2,11 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const User = require('../models/userModel')
 
+// Generate JWT
+const generateToken = (id) => {
+  return jwt.sign({ id }, process.env.SECRET, { expiresIn: '30d' })
+}
+
 // @desc Register User
 // @route POST /api/users
 // @access Public
@@ -25,11 +30,16 @@ const registerUser = async (req, res) => {
         password: hashedPassword,
       })
 
+      await res.status(201).json({
+        _id: newUser.id,
+        name: newUser.name,
+        email: newUser.email,
+        token: generateToken(newUser._id),
+      })
       await newUser.save()
-      await res.status(201).json({ message: 'New user registered' })
     }
   } catch (error) {
-    res.status(500).send(error)
+    res.status(500).send('error occured')
   }
 }
 
@@ -43,7 +53,12 @@ const loginUser = async (req, res) => {
 
   try {
     if (user && (await bcrypt.compare(password, user.password))) {
-      res.status(200).json({ message: `User ${user.name} logged in` })
+      res.status(200).json({
+        _id: user.id,
+        name: user.name,
+        email: user.email,
+        token: generateToken(user._id),
+      })
     } else {
       res.status(400).json({ message: 'Invalid credentials' })
     }
