@@ -33,14 +33,28 @@ const setGoal = async (req, res) => {
 // @access Private
 const updateGoal = async (req, res) => {
   const goal = await Goal.findById(req.params.id)
-  const updatedGoal = await Goal.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-  })
 
   try {
-    await res.status(200).json(updatedGoal)
+    const user = await User.findById(req.user.id)
+
+    if (!user) {
+      res.status(401)
+      throw new Error('Goal user not found')
+    } else if (goal.user.toString() !== user.id) {
+      res.status(401)
+      throw new Error('Update not authorized')
+    }
+
+    await Goal.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    })
+
+    await res.status(200).json({
+      message: `${user.name}'s goals updated`,
+      goals: await Goal.find({ user: user.id.toString() }),
+    })
   } catch (error) {
-    res.status(500).send(error)
+    res.status(500).send(error.message)
   }
 }
 
@@ -51,10 +65,24 @@ const deleteGoal = async (req, res) => {
   const goal = await Goal.findById(req.params.id)
 
   try {
+    const user = await User.findById(req.user.id)
+
+    if (!user) {
+      res.status(401)
+      throw new Error('Goal user not found')
+    } else if (goal.user.toString() !== user.id) {
+      res.status(401)
+      throw new Error('Delete not authorized')
+    }
+
     await goal.remove()
-    await res.status(200).json({ message: `Deleted Goal ${req.params.id}` })
+    await res.status(200).json({
+      message: `${user.name}'s goals updated`,
+      deleted: goal.title,
+      goals: await Goal.find({ user: user.id.toString() }),
+    })
   } catch (error) {
-    res.status(500).send(error)
+    res.status(500).send(error.message)
   }
 }
 
