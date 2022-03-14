@@ -1,11 +1,12 @@
 // REQUIRE
 const Goal = require('../models/goalModel')
+const User = require('../models/userModel')
 
 // @desc Get goals
 // @route GET /api/goals
 // @access Private
 const getGoals = async (req, res) => {
-  const goals = await Goal.find()
+  const goals = await Goal.find({ user: req.user.id })
   await res.status(200).json(goals)
 }
 
@@ -13,15 +14,17 @@ const getGoals = async (req, res) => {
 // @route POST /api/goals
 // @access Private
 const setGoal = async (req, res) => {
-  const newGoal = await new Goal(req.body)
+  const newGoal = await new Goal({
+    user: req.user.id, // Retrieve user id from decoded token in auth middleware
+    title: req.body.title,
+  })
 
   try {
     await newGoal.save()
-    await res
-      .status(201)
-      .json({ message: `'${newGoal.title}' added as a new goal` })
+    await res.status(201).json(newGoal)
   } catch (error) {
-    res.status(500).send(error)
+    res.status(500).json({ message: 'throw setGoal error' })
+    throw new Error('setGoal error')
   }
 }
 
