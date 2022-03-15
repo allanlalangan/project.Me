@@ -10,10 +10,30 @@ const LoginForm = () => {
 
   return (
     <form onSubmit={handleLogin} className={styles.form}>
-      <label htmlFor='username'>Username</label>
-      <input type='text' id='username' />
-      <label htmlFor='password'>Password</label>
-      <input type='text' id='password' />
+      <fieldset className={styles['form-fieldset']}>
+        <label className={styles.label} htmlFor='username'>
+          Username
+        </label>
+        <input
+          className={styles['form-control']}
+          type='text'
+          id='username'
+          placeholder={'Enter email'}
+        />
+      </fieldset>
+
+      <fieldset className={styles['form-fieldset']}>
+        <label className={styles.label} htmlFor='password'>
+          Password
+        </label>
+        <input
+          className={styles['form-control']}
+          type='text'
+          id='password'
+          placeholder={'Enter password'}
+        />
+      </fieldset>
+
       <Button type='submit'>Login</Button>
     </form>
   )

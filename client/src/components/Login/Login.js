@@ -5,10 +5,10 @@ import LoginForm from './LoginForm'
 
 const Login = () => {
   return (
-    <section className={styles['login-container']}>
+    <div className={styles['login-container']}>
       <h1 className={styles['login-heading']}>User Login</h1>
       <LoginForm />
-    </section>
+    </div>
   )
 }
 

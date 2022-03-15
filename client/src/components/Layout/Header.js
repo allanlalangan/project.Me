@@ -6,8 +6,12 @@ import Navbar from './Navbar'
 const Header = () => {
   return (
     <header className={styles['main-header']}>
-      <h1 className={styles['main-heading']}>Dash</h1>
-      <Navbar />
+      <section className={styles.logo}>
+        <h1 className={styles['main-heading']}>Dash</h1>
+      </section>
+      <section className={styles['links']}>
+        <Navbar />
+      </section>
     </header>
   )
 }

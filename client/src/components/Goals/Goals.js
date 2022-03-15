@@ -5,10 +5,10 @@ import NewGoal from './NewGoal/NewGoal'
 
 const Goals = () => {
   return (
-    <section className={styles['goals-container']}>
+    <div className={styles['goals-container']}>
       <h1 className={styles['goals-heading']}>Goals</h1>
       <NewGoal />
-    </section>
+    </div>
   )
 }
 

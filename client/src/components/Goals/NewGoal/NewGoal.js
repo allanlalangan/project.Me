@@ -4,10 +4,10 @@ import NewGoalForm from './NewGoalForm'
 
 const NewGoal = () => {
   return (
-    <div className={styles['new-goal']}>
+    <section className={styles['new-goal']}>
       <h3>Set a new goal</h3>
       <NewGoalForm />
-    </div>
+    </section>
   )
 }
 

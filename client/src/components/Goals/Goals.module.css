@@ -5,8 +5,7 @@
 .goals-container {
   padding: 1rem;
   width: 50vw;
-  height: 75vh;
 
   background-color: var(--ter-color);
-  border-radius: 0 1rem 1rem 1rem;
+  border-radius: 1rem;
 }

@@ -4,3 +4,27 @@
   align-items: center;
   justify-content: center;
 }
+
+.form-fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid;
+  border-color: var(--sec-color);
+}
+
+.label {
+  display: none;
+}
+
+.form-control {
+  padding: 1rem;
+}
+
+.login-btn {
+  border-color: var(--sec-color);
+}
