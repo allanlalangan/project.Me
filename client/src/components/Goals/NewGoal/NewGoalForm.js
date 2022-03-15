@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './NewGoalForm.module.css'
-import Button from '../../../UI/Button'
+import Button from '../../UI/Button'
 
 const NewGoalForm = (props) => {
   const handleNewGoal = (e) => {

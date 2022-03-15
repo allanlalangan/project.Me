@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './LoginForm.module.css'
 
-import Button from '../../UI/Button'
+import Button from '../UI/Button'
 
 const LoginForm = () => {
   const handleLogin = (e) => {
