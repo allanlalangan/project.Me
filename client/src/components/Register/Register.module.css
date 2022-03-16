@@ -4,13 +4,13 @@
   align-items: center;
   justify-content: center;
 
-  background-color: var(--ter-color);
   border-radius: 1rem;
-  width: 60vw;
-  /* height: 60vh; */
+  width: 75vw;
+  height: 75vh;
   padding: 1rem;
 }
 
 .register-heading {
-  color: var(--prim-color);
+  color: var(--sec-color);
+  padding: 1rem;
 }

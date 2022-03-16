@@ -1,11 +1,12 @@
 .button {
   padding: 0.5rem;
 
-  margin: 1rem 0;
+  margin-top: 1rem;
 
-  background-color: var(--ter-color);
-  color: var(--prim-color);
+  background-color: var(--prim-color);
+  color: var(--sec-color);
   border: 2px solid var(--prim-color);
+  border-color: var(--sec-color);
   border-radius: 0.5rem;
   padding: 1rem;
   text-transform: uppercase;

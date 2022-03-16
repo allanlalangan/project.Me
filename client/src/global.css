@@ -10,10 +10,10 @@
 
 /* STYLE VARIABLES */
 :root {
-  --prim-color: hsla(10, 15%, 20%, 1);
-  --sec-color: hsla(30, 100%, 70%, 1);
+  --prim-color: hsla(90, 20%, 15%, 1);
+  --sec-color: hsla(100, 100%, 70%, 1);
   --ter-color: hsla(44, 100%, 90%, 1);
-  --opaque: hsla(51, 100%, 75%, 0.6);
+  --prim-acc: hsla(177, 25%, 55%, 1);
 }
 
 input {

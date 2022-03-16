@@ -13,3 +13,7 @@
   list-style: none;
   padding: 0 1rem;
 }
+
+.link-icons {
+  color: var(--sec-color);
+}

@@ -11,23 +11,20 @@ const LoginForm = () => {
   return (
     <form onSubmit={handleLogin} className={styles.form}>
       <fieldset className={styles['form-fieldset']}>
-        <label className={styles.label} htmlFor='username'>
-          Username
+        <label className={styles.label} htmlFor='email'>
+          Email
         </label>
         <input
-          className={styles['form-control']}
+          className={`${styles['form-control']} ${styles['email-field']}`}
           type='text'
           id='username'
           placeholder={'Enter email'}
         />
-      </fieldset>
-
-      <fieldset className={styles['form-fieldset']}>
         <label className={styles.label} htmlFor='password'>
           Password
         </label>
         <input
-          className={styles['form-control']}
+          className={`${styles['form-control']} ${styles['pass-field']}`}
           type='text'
           id='password'
           placeholder={'Enter password'}

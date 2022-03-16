@@ -1,0 +1,5 @@
+.card-container {
+  background-color: var(--prim-color);
+  border: solid 1px var(--prim-acc);
+  border-radius: 1rem;
+}

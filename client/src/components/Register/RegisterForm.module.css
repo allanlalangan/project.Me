@@ -11,10 +11,10 @@
   align-items: center;
   justify-content: center;
 
-  padding: 1rem;
-  margin-top: 1rem;
+  padding: 2rem;
   border: 1px solid;
-  border-color: var(--sec-color);
+  border-radius: 1rem;
+  border-color: var(--prim-acc);
 }
 
 .label {
@@ -22,7 +22,19 @@
 }
 
 .form-control {
+  background-color: var(--ter-color);
+  font-size: 1rem;
   padding: 1rem;
+  margin: 0.25rem;
+  border: none;
+}
+
+.username-field {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.pass2-field {
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .register-btn {
