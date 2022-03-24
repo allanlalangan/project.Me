@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import styles from './RegisterForm.module.css'
 
 import Button from '../UI/Button'
@@ -17,6 +17,9 @@ const RegisterForm = () => {
   const [formData, setFormData] = useState(initialFormData)
 
   const { name, email, password, passwordConfirm } = formData
+  const { user, isError, isSuccess, isLoading, message } = useSelector(
+    (state) => state.auth
+  )
 
   const onInputChange = (e) => {
     setFormData((prevState) => ({
@@ -27,7 +30,6 @@ const RegisterForm = () => {
 
   const handleRegister = (e) => {
     e.preventDefault()
-    console.log(formData)
 
     if (password !== passwordConfirm) {
       console.log('Passwords do not match')
@@ -38,7 +40,6 @@ const RegisterForm = () => {
         password,
       }
       dispatch(register(userData))
-      dispatch(reset)
       setFormData(initialFormData)
     }
   }

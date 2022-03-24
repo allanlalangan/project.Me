@@ -14,3 +14,7 @@
   color: var(--sec-color);
   padding: 1rem;
 }
+
+.register-msg {
+  color: var(--sec-color);
+}

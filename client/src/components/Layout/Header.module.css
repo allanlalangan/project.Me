@@ -10,8 +10,14 @@
   border-bottom: 1px solid var(--prim-acc);
 }
 
-.main-heading {
+.logo-container {
+  width: 50%;
+  height: 8vh;
+  display: flex;
 }
 
-.links {
+.main-logo {
+  font-size: 8vh;
+}
+.main-heading {
 }

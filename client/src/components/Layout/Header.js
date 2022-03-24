@@ -1,20 +1,20 @@
 import React from 'react'
 import styles from './Header.module.css'
-import { FaPassport, FaLeaf } from 'react-icons/fa'
+import { FcBiomass } from 'react-icons/fc'
+import { Link } from 'react-router-dom'
 
 import Navbar from './Navbar'
 
 const Header = () => {
   return (
     <header className={styles['main-header']}>
-      <section className={styles.logo}>
-        <h1 className={styles['main-heading']}>
-          <FaLeaf />
-        </h1>
+      <section className={styles['logo-container']}>
+        <h1 className={styles['main-heading']}></h1>
+        <Link to='/'>
+          <FcBiomass className={styles['main-logo']} />
+        </Link>
       </section>
-      <section className={styles['links']}>
-        <Navbar />
-      </section>
+      <Navbar />
     </header>
   )
 }
