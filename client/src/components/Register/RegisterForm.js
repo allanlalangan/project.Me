@@ -16,7 +16,7 @@ const RegisterForm = () => {
         </label>
         <input
           className={`${styles['form-control']} ${styles['username-field']}`}
-          type='username'
+          type='text'
           id='username'
           name='username'
           placeholder={'Enter username'}

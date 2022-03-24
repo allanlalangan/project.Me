@@ -10,7 +10,7 @@
 
 /* STYLE VARIABLES */
 :root {
-  --prim-color: hsla(90, 20%, 15%, 1);
+  --prim-color: hsl(185, 20%, 15%);
   --sec-color: hsla(100, 100%, 70%, 1);
   --ter-color: hsla(44, 100%, 90%, 1);
   --prim-acc: hsla(177, 25%, 55%, 1);
