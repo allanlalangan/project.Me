@@ -3,9 +3,9 @@ import styles from './Card.module.css'
 
 const Card = (props) => {
   return (
-    <section className={`${styles['card-container']} ${props.className}`}>
+    <div className={`${styles['card-container']} ${props.className}`}>
       {props.children}
-    </section>
+    </div>
   )
 }
 
