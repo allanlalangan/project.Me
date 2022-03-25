@@ -1,0 +1,15 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 60vw;
+  height: 60vh;
+  padding: 1rem;
+}
+
+.dashboard-heading {
+  color: var(--sec-color);
+  padding: 1rem;
+}

@@ -17,11 +17,11 @@ const Navbar = () => {
             <FcGoodDecision className={styles['link-icons']} />
           </Link>
         </li>
-        <li>
-          <Link to='/'>
+        {/* <li>
+          <Link to='/dashboard'>
             <FcTodoList className={styles['link-icons']} />
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link to='/'>
             <FcSettings className={styles['link-icons']} />

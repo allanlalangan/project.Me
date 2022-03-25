@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
-
 // ROUTING
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/home'
 import LoginPage from './pages/login'
 import RegisterPage from './pages/register'
+import DashboardPage from './pages/dashboard'
 
 import Header from './components/Layout/Header'
 // import Login from './components/Login/Login'
@@ -23,6 +22,7 @@ const App = () => {
             <Route path='/' element={<HomePage />} />
             <Route path='/register' element={<RegisterPage />} />
             <Route path='/login' element={<LoginPage />} />
+            <Route path='/dashboard' element={<DashboardPage />} />
           </Routes>
         </section>
       </Router>

@@ -1,16 +1,40 @@
-import React from 'react'
+import { useEffect } from 'react'
 import styles from './Register.module.css'
 import Card from '../UI/Card'
 import RegisterForm from './RegisterForm'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { reset } from '../../features/authSlice'
 
 const Register = () => {
-  const isLoading = useSelector((state) => state.auth.isLoading)
+  const dispatch = useDispatch()
+  const redirect = useNavigate()
+  const { user, isError, isSuccess, isLoading, message } = useSelector(
+    (state) => state.auth
+  )
+
+  useEffect(() => {
+    if (isError) {
+      console.log(message)
+    }
+
+    if (isSuccess || user) {
+      redirect('/dashboard')
+    }
+
+    dispatch(reset)
+  }, [user, isError, isSuccess, message])
+
   return (
     <Card className={styles['register-container']}>
-      {isLoading && <h2 className={styles['register-msg']}>Loading</h2>}
-      <h2 className={styles['register-heading']}>Register New User</h2>
-      <RegisterForm />
+      {isLoading ? (
+        <h2 className={styles['register-msg']}>Loading</h2>
+      ) : (
+        <>
+          <h2 className={styles['register-heading']}>Register New User</h2>
+          <RegisterForm />
+        </>
+      )}
     </Card>
   )
 }

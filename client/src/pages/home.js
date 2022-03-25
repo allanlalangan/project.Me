@@ -1,9 +1,9 @@
-import Idle from '../components/UI/Idle'
+import Home from '../components/UI/Home'
 
 const home = () => {
   return (
     <>
-      <Idle />
+      <Home />
     </>
   )
 }
