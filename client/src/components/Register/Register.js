@@ -23,7 +23,7 @@ const Register = () => {
     }
 
     dispatch(reset)
-  }, [user, isError, isSuccess, message])
+  }, [user, isError, isSuccess, message, dispatch, redirect])
 
   return (
     <Card className={styles['register-container']}>

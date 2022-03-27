@@ -9,6 +9,9 @@
   padding: 1rem;
 }
 
+.login-msg {
+}
+
 .login-heading {
   color: var(--sec-color);
   padding: 1rem;

@@ -22,10 +22,30 @@ const register = createAsyncThunk(
       }
       return response.data
     } catch (error) {
-      thunkAPI.rejectWithValue(error.message)
+      return thunkAPI.rejectWithValue(error.message)
     }
   }
 )
+
+const login = createAsyncThunk('auth/login', async (userData, thunkAPI) => {
+  try {
+    const response = await axios.post('/api/users/login', userData)
+    if (response.data) {
+      localStorage.setItem('user', JSON.stringify(response.data))
+    }
+    return response.data
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.message)
+  }
+})
+
+const logout = createAsyncThunk('auth/logout', async (thunkAPI) => {
+  try {
+    await localStorage.removeItem('user')
+  } catch (error) {
+    thunkAPI.rejectWithValue(error.message)
+  }
+})
 
 const authSlice = createSlice({
   name: 'auth',
@@ -41,7 +61,7 @@ const authSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(register.pending, (state, action) => {
+      .addCase(register.pending, (state) => {
         state.isLoading = true
       })
       .addCase(register.fulfilled, (state, action) => {
@@ -55,9 +75,26 @@ const authSlice = createSlice({
         state.isError = true
         state.message = action.payload
       })
+      .addCase(login.pending, (state) => {
+        state.isLoading = true
+      })
+      .addCase(login.fulfilled, (state, action) => {
+        state.user = action.payload
+        state.isLoading = false
+        state.isSuccess = true
+      })
+      .addCase(login.rejected, (state, action) => {
+        state.user = null
+        state.isLoading = false
+        state.isError = true
+        state.message = action.payload
+      })
+      .addCase(logout.fulfilled, (state) => {
+        state.user = null
+      })
   },
 })
 
 export default authSlice.reducer
 export const { reset } = authSlice.actions
-export { register }
+export { register, login, logout }
