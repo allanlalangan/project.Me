@@ -8,6 +8,8 @@
   font-size: calc(10px + 2vmin);
   color: var(--sec-color);
   border-bottom: 1px solid var(--prim-acc);
+
+  box-shadow: var(--header-shadow);
 }
 
 .logo-container {

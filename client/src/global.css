@@ -13,11 +13,16 @@
   --prim-color: hsl(185, 20%, 15%);
   --sec-color: hsla(50, 100%, 70%, 1);
   --ter-color: hsla(44, 100%, 90%, 1);
-  --prim-acc: hsla(177, 25%, 55%, 1);
+  --prim-acc: hsla(180, 25%, 55%, 1);
+
+  --header-shadow: 0px 0.25rem 1rem 0.25rem rgba(0, 0, 0, 0.2);
+  --box-shadow: 0px 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+  --box-inset: inset 0px 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 input {
   font-family: inherit;
+  box-shadow: var(--box-inset);
 }
 button {
   font-family: inherit;

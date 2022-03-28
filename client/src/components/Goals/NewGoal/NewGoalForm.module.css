@@ -10,8 +10,11 @@
 .new-goal-input {
   width: 100%;
   padding: 1rem;
-  border: 1px solid var(--sec-color);
-  /* border-radius: 0.5rem; */
+
+  color: var(--sec-color);
+  border: none;
+  border: 1px solid var(--prim-acc);
+  background-color: var(--prim-color);
 }
 
 .duedate {

@@ -4,9 +4,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 60vw;
-  height: 60vh;
-  padding: 1rem;
+  /* width: 60vw;
+  height: 60vh; */
 }
 
 .dashboard-heading {

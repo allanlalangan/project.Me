@@ -38,7 +38,7 @@ const Navbar = () => {
         {user && (
           <>
             <li>
-              <Link to='/dashboard'>
+              <Link to='/goals'>
                 <FcTodoList className={styles['link-icons']} />
               </Link>
             </li>

@@ -3,9 +3,6 @@
 }
 
 .goals-container {
-  padding: 1rem;
+  color: var(--sec-color);
   width: 50vw;
-
-  background-color: var(--ter-color);
-  border-radius: 1rem;
 }

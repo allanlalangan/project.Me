@@ -17,6 +17,7 @@ const protectRoute = async (req, res, next) => {
       // !! REMOVE PASSWORD FROM REQUEST !!
       req.user = await User.findById(decoded.id).select('-password')
 
+      // the req object is passed to the route or next middleware
       next()
     } catch (error) {
       // console.log(error)

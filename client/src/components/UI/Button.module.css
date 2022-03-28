@@ -1,7 +1,7 @@
 .button {
   padding: 0.5rem;
 
-  margin-top: 1rem;
+  margin: 1rem;
 
   background-color: var(--prim-color);
   color: var(--sec-color);
