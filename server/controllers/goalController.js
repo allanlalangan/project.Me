@@ -35,12 +35,10 @@ const updateGoal = async (req, res) => {
   const goal = await Goal.findById(req.params.id)
 
   try {
-    const user = await User.findById(req.user.id)
-
-    if (!user) {
+    if (!req.user) {
       res.status(401)
       throw new Error('Goal user not found')
-    } else if (goal.user.toString() !== user.id) {
+    } else if (goal.user.toString() !== req.user.id) {
       res.status(401)
       throw new Error('Update not authorized')
     }
@@ -65,12 +63,10 @@ const deleteGoal = async (req, res) => {
   const goal = await Goal.findById(req.params.id)
 
   try {
-    const user = await User.findById(req.user.id)
-
-    if (!user) {
+    if (!req.user) {
       res.status(401)
       throw new Error('Goal user not found')
-    } else if (goal.user.toString() !== user.id) {
+    } else if (goal.user.toString() !== req.user.id) {
       res.status(401)
       throw new Error('Delete not authorized')
     }

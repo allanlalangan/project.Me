@@ -14,9 +14,9 @@ const initialState = {
 
 const register = createAsyncThunk(
   'auth/register',
-  async (userData, thunkAPI) => {
+  async (formData, thunkAPI) => {
     try {
-      const response = await axios.post('/api/users', userData)
+      const response = await axios.post('/api/users', formData)
       if (response.data) {
         localStorage.setItem('user', JSON.stringify(response.data))
       }
@@ -27,9 +27,9 @@ const register = createAsyncThunk(
   }
 )
 
-const login = createAsyncThunk('auth/login', async (userData, thunkAPI) => {
+const login = createAsyncThunk('auth/login', async (formData, thunkAPI) => {
   try {
-    const response = await axios.post('/api/users/login', userData)
+    const response = await axios.post('/api/users/login', formData)
     if (response.data) {
       localStorage.setItem('user', JSON.stringify(response.data))
     }

@@ -1,20 +1,33 @@
-import React from 'react'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addGoal } from '../../../features/goalsSlice'
 import styles from './NewGoalForm.module.css'
 import Button from '../../UI/Button'
 
 const NewGoalForm = (props) => {
-  const handleNewGoal = (e) => {
+  const dispatch = useDispatch()
+  const [addGoalText, setAddGoalText] = useState('')
+
+  const handleAddGoalTextChange = (e) => {
+    setAddGoalText(e.target.value)
+  }
+
+  const handleAddGoal = (e) => {
     e.preventDefault()
-    console.log('add new goal')
+    const formData = { title: addGoalText }
+    dispatch(addGoal(formData))
+    setAddGoalText('')
   }
 
   return (
-    <form onSubmit={handleNewGoal} className={styles['new-goal-form']}>
-      <label htmlFor='name'></label>
+    <form onSubmit={handleAddGoal} className={styles['new-goal-form']}>
+      <label htmlFor='title'></label>
       <input
+        value={addGoalText}
+        onChange={handleAddGoalTextChange}
         type='text'
-        id='name'
-        name='name'
+        id='title'
+        name='title'
         placeholder='I want to...'
         className={`${styles['new-goal-input']}`}
       />
