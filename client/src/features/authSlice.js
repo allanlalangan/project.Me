@@ -22,7 +22,7 @@ const register = createAsyncThunk(
       }
       return response.data
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message)
+      return thunkAPI.rejectWithValue(error.toString())
     }
   }
 )
@@ -35,7 +35,7 @@ const login = createAsyncThunk('auth/login', async (formData, thunkAPI) => {
     }
     return response.data
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message)
+    return thunkAPI.rejectWithValue(error.toString())
   }
 })
 
@@ -43,7 +43,7 @@ const logout = createAsyncThunk('auth/logout', async (thunkAPI) => {
   try {
     await localStorage.removeItem('user')
   } catch (error) {
-    thunkAPI.rejectWithValue(error.message)
+    return thunkAPI.rejectWithValue(error.toString())
   }
 })
 
@@ -62,9 +62,12 @@ const authSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(register.pending, (state) => {
+        state.message = 'Registering User'
         state.isLoading = true
       })
       .addCase(register.fulfilled, (state, action) => {
+        state.message =
+          'Successfully registered new user. A verification email has been sent. Please verify your account.'
         state.user = action.payload
         state.isLoading = false
         state.isSuccess = true
@@ -76,9 +79,11 @@ const authSlice = createSlice({
         state.message = action.payload
       })
       .addCase(login.pending, (state) => {
+        state.message = 'Logging in...'
         state.isLoading = true
       })
       .addCase(login.fulfilled, (state, action) => {
+        state.message = ''
         state.user = action.payload
         state.isLoading = false
         state.isSuccess = true
@@ -90,6 +95,7 @@ const authSlice = createSlice({
         state.message = action.payload
       })
       .addCase(logout.fulfilled, (state) => {
+        state.message = 'User successfully logged out'
         state.user = null
       })
   },

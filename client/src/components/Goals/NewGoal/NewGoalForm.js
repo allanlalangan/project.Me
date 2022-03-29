@@ -31,6 +31,16 @@ const NewGoalForm = (props) => {
         placeholder='I want to...'
         className={`${styles['new-goal-input']}`}
       />
+      {/* <label for='category'>Category</label>
+      <select name='category' id='category'>
+        <option value='' disabled selected hidden>
+          Select a category
+        </option>
+        <option value='work'>Work</option>
+        <option value='home'>Home</option>
+        <option value='code'>Code</option>
+        <option value='self'>Self</option>
+      </select> */}
       {/* <label htmlFor='duedate'>Due by:</label>
       <input
         className={`${styles['new-goal-input']}`}
@@ -46,7 +56,9 @@ const NewGoalForm = (props) => {
         cols='30'
         rows='10'
       ></textarea> */}
-      <Button type='submit'>Add Goal</Button>
+      <Button className={`${styles['add-goal-btn']}`} type='submit'>
+        Add Goal
+      </Button>
     </form>
   )
 }

@@ -52,7 +52,9 @@ const LoginForm = () => {
         />
       </fieldset>
 
-      <Button type='submit'>Login</Button>
+      <Button className={`${styles['login-btn']}`} type='submit'>
+        Login
+      </Button>
     </form>
   )
 }

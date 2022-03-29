@@ -18,8 +18,21 @@
   display: flex;
 }
 
-.main-logo {
-  font-size: 8vh;
+.logo {
+  display: flex;
+  /* position: relative; */
+}
+
+.logo-icon {
+  font-size: 6vh;
+}
+
+.logo-heading {
+  /* margin-left: -0.75rem; */
+  font-weight: 300;
+  font-size: 7vh;
+  text-decoration: none;
+  /* letter-spacing: -2.5px; */
 }
 .main-heading {
 }

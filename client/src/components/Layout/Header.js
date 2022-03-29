@@ -9,9 +9,11 @@ const Header = () => {
   return (
     <header className={styles['main-header']}>
       <section className={styles['logo-container']}>
-        <h1 className={styles['main-heading']}></h1>
         <Link to='/'>
-          <FcBiomass className={styles['main-logo']} />
+          <div className={`${styles['logo']}`}>
+            <FcBiomass className={styles['logo-icon']} />
+            <h1 className={styles['logo-heading']}>project.Me</h1>
+          </div>
         </Link>
       </section>
       <Navbar />

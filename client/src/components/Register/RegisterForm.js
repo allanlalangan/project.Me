@@ -88,7 +88,9 @@ const RegisterForm = () => {
         />
       </fieldset>
 
-      <Button type='submit'>Create User</Button>
+      <Button className={`${styles['create-user-btn']}`} type='submit'>
+        Create User
+      </Button>
     </form>
   )
 }

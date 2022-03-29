@@ -1,8 +1,24 @@
-.goals-heading {
-  color: var(--prim-color);
+.goals-container {
+  padding: 1rem 5rem;
+  color: var(--sec-color);
+  width: 90vw;
+  height: calc(90vh - 2.5rem);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 
-.goals-container {
+.goals-heading {
   color: var(--sec-color);
-  width: 50vw;
+}
+
+.goals-list {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  justify-content: center;
 }
