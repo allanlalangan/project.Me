@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import styles from './Register.module.css'
-import Card from '../UI/Card'
+import Container from '../UI/Container/Container'
 import RegisterForm from './RegisterForm'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -26,7 +26,7 @@ const Register = () => {
   }, [user, isError, isSuccess, message, dispatch, redirect])
 
   return (
-    <Card className={styles['register-container']}>
+    <Container className={styles['register-container']}>
       {isLoading ? (
         <h2 className={styles['register-msg']}>Loading</h2>
       ) : (
@@ -35,7 +35,7 @@ const Register = () => {
           <RegisterForm />
         </>
       )}
-    </Card>
+    </Container>
   )
 }
 

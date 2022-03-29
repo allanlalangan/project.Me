@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { login } from '../../features/authSlice'
 import styles from './LoginForm.module.css'
-import Button from '../UI/Button'
+import Button from '../UI/Button/Button'
 
 const LoginForm = () => {
   const dispatch = useDispatch()

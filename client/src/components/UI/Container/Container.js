@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './Card.module.css'
+import styles from './Container.module.css'
 
-const Card = (props) => {
+const Container = (props) => {
   return (
     <div className={`${styles['card-container']} ${props.className}`}>
       {props.children}
@@ -9,4 +9,4 @@ const Card = (props) => {
   )
 }
 
-export default Card
+export default Container

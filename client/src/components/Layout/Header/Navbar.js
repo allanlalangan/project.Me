@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { FcTodoList, FcSettings, FcKey, FcGoodDecision } from 'react-icons/fc'
 import styles from './Navbar.module.css'
 import { useSelector, useDispatch } from 'react-redux'
-import { logout, reset } from '../../features/authSlice'
+import { logout, reset } from '../../../features/authSlice'
 import { MdLogout } from 'react-icons/md'
 
 const Navbar = () => {

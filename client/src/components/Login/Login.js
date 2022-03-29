@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import { reset } from '../../features/authSlice'
 
 import styles from './Login.module.css'
-import Card from '../UI/Card'
+import Container from '../UI/Container/Container'
 
 import LoginForm from './LoginForm'
 
@@ -29,7 +29,7 @@ const Login = () => {
   }, [user, isError, isSuccess, message, dispatch, redirect])
 
   return (
-    <Card className={styles['login-container']}>
+    <Container className={styles['login-container']}>
       {isLoading ? (
         <h2 className={styles['register-msg']}>Loading</h2>
       ) : (
@@ -38,7 +38,7 @@ const Login = () => {
           <LoginForm />
         </>
       )}
-    </Card>
+    </Container>
   )
 }
 

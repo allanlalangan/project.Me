@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import Card from '../UI/Card'
+import Container from '../UI/Container/Container'
 
 const Dashboard = () => {
   const redirect = useNavigate()
@@ -14,9 +14,9 @@ const Dashboard = () => {
     }
   }, [redirect])
   return (
-    <Card className={styles['dashboard-container']}>
+    <Container className={styles['dashboard-container']}>
       <h2 className={styles['dashboard-heading']}>Dashboard</h2>
-    </Card>
+    </Container>
   )
 }
 

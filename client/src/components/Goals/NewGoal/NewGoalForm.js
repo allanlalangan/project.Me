@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addGoal } from '../../../features/goalsSlice'
 import styles from './NewGoalForm.module.css'
-import Button from '../../UI/Button'
+import Button from '../../UI/Button/Button'
 
 const NewGoalForm = (props) => {
   const dispatch = useDispatch()

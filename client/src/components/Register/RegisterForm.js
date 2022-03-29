@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import styles from './RegisterForm.module.css'
 
-import Button from '../UI/Button'
+import Button from '../UI/Button/Button'
 import { register } from '../../features/authSlice'
 
 const RegisterForm = () => {

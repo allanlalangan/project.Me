@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './GoalItem.module.css'
 import { MdOutlineEditNote, MdDeleteForever } from 'react-icons/md'
-import Button from '../UI/Button'
+import Button from '../../UI/Button/Button'
 
 const GoalItem = (props) => {
   return (
