@@ -5,7 +5,7 @@ const {
   setGoal,
   updateGoal,
   deleteGoal,
-} = require('../controllers/goalController')
+} = require('../controllers/goalsController')
 const { protectRoute } = require('../middleware/userAuth')
 
 router.get('/', protectRoute, getGoals)

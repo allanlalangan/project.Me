@@ -4,7 +4,7 @@ const {
   registerUser,
   loginUser,
   getMe,
-} = require('../controllers/userController')
+} = require('../controllers/usersController')
 const { protectRoute } = require('../middleware/userAuth')
 
 router.post('/', registerUser)
