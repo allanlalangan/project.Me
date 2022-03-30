@@ -1,10 +1,6 @@
 // IMPORT
-
-// hooks
-import { useState } from 'react'
-// redux
-import { useDispatch } from 'react-redux'
-import { addGoal } from '../../../features/goalsSlice'
+// useNewGoal hook
+import useNewGoal from './useNewGoal'
 // styles and ui
 import styles from './NewGoalForm.module.css'
 import Button from '../../UI/Button/Button'
@@ -12,19 +8,7 @@ import Button from '../../UI/Button/Button'
 ///
 
 const NewGoalForm = (props) => {
-  const dispatch = useDispatch()
-  const [addGoalText, setAddGoalText] = useState('')
-
-  const handleAddGoalTextChange = (e) => {
-    setAddGoalText(e.target.value)
-  }
-
-  const handleAddGoal = (e) => {
-    e.preventDefault()
-    const formData = { title: addGoalText }
-    dispatch(addGoal(formData))
-    setAddGoalText('')
-  }
+  const { handleAddGoal, handleAddGoalTextChange, addGoalText } = useNewGoal()
 
   return (
     <form onSubmit={handleAddGoal} className={styles['new-goal-form']}>
