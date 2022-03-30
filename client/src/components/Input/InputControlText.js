@@ -1,7 +1,7 @@
 // styles and ui
-import styles from './Input.module.css'
+import styles from './InputControlText.module.css'
 
-const Input = (props) => {
+const InputControlText = (props) => {
   return (
     <div>
       <label
@@ -18,20 +18,8 @@ const Input = (props) => {
         onChange={props.onChange}
         placeholder={props.placeholder}
       />
-      {/* <label
-        htmlFor={props.for}
-        className={styles[`input-${props.type}-label`]}
-      >
-        {props.label}
-      </label>
-      <input
-        type={props.type}
-        name={props.for}
-        id={props.for}
-        className={`${styles.input} ${props.className}`}
-      /> */}
     </div>
   )
 }
 
-export default Input
+export default InputControlText

@@ -1,8 +1,14 @@
+// IMPORT
+
+// hooks
 import { useState } from 'react'
+// redux
 import { useDispatch } from 'react-redux'
 import { register } from '../../features/authSlice'
 
-const useRegister = (input) => {
+///
+
+const useRegister = () => {
   const dispatch = useDispatch()
 
   const inputValues_init = {
@@ -39,7 +45,7 @@ const useRegister = (input) => {
     }
   }
 
-  return { inputValues, onInputChange, setInputValues, handleRegister }
+  return { onInputChange, handleRegister }
 }
 
 export default useRegister

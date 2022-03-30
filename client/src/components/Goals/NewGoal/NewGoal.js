@@ -1,7 +1,12 @@
-import React from 'react'
+// IMPORT
+
+// styles and ui
 import styles from './NewGoal.module.css'
-import NewGoalForm from './NewGoalForm'
 import Container from '../../UI/Container/Container'
+// custom components
+import NewGoalForm from './NewGoalForm'
+
+///
 
 const NewGoal = () => {
   return (

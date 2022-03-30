@@ -1,18 +1,30 @@
+// IMPORT
+
+// hooks
 import { useEffect } from 'react'
+// redux
+import { useSelector, useDispatch } from 'react-redux'
+import { reset } from '../../features/authSlice'
+// routing
+import { useNavigate } from 'react-router-dom'
+// styles and ui
 import styles from './Register.module.css'
 import Container from '../UI/Container/Container'
+// custom components
 import RegisterForm from './RegisterForm'
-import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { reset } from '../../features/authSlice'
+
+///
 
 const Register = () => {
   const dispatch = useDispatch()
   const redirect = useNavigate()
+
+  // Select auth state property values
   const { user, isError, isSuccess, isLoading, message } = useSelector(
     (state) => state.auth
   )
 
+  // On mount and re-render,
   useEffect(() => {
     if (isError) {
       console.log(message)

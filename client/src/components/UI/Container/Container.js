@@ -1,5 +1,9 @@
-import React from 'react'
+// IMPORT
+
+// styles and ui
 import styles from './Container.module.css'
+
+///
 
 const Container = (props) => {
   return (

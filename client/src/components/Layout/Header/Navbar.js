@@ -1,10 +1,17 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import { FcTodoList, FcSettings, FcKey, FcGoodDecision } from 'react-icons/fc'
-import styles from './Navbar.module.css'
+// IMPORT
+
+// redux
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../../../features/authSlice'
+// routing
+import { Link, useNavigate } from 'react-router-dom'
+// styles and ui
+import styles from './Navbar.module.css'
+// icons
+import { FcTodoList, FcSettings, FcKey, FcGoodDecision } from 'react-icons/fc'
 import { MdLogout } from 'react-icons/md'
+
+///
 
 const Navbar = () => {
   const user = useSelector((state) => state.auth.user)

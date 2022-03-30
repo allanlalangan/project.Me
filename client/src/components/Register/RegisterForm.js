@@ -1,11 +1,12 @@
 // IMPORT
+
 // useRegister hook
 import useRegister from './useRegister'
 // styles and ui
 import styles from './RegisterForm.module.css'
 import Button from '../UI/Button/Button'
 // custom components
-import Input from '../Input/Input'
+import InputControlText from '../Input/InputControlText'
 
 ///
 
@@ -15,7 +16,7 @@ const RegisterForm = () => {
   return (
     <form onSubmit={handleRegister} className={styles.form}>
       <fieldset className={styles['form-fieldset']}>
-        <Input
+        <InputControlText
           onChange={onInputChange}
           type='text'
           for='name'
@@ -23,7 +24,7 @@ const RegisterForm = () => {
           label='Name'
           className={`${styles['name-field']}`}
         />
-        <Input
+        <InputControlText
           onChange={onInputChange}
           type='email'
           for='email'
@@ -31,7 +32,7 @@ const RegisterForm = () => {
           label='Email'
           className={`${styles['email-field']}`}
         />
-        <Input
+        <InputControlText
           onChange={onInputChange}
           type='password'
           for='password'
@@ -39,7 +40,7 @@ const RegisterForm = () => {
           label='Password'
           className={`${styles['pass-field']}`}
         />
-        <Input
+        <InputControlText
           onChange={onInputChange}
           type='password'
           for='passwordConfirm'

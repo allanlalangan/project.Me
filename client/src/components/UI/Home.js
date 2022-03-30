@@ -1,9 +1,18 @@
+// IMPORT
+
+// hooks
 import { useEffect } from 'react'
+// redux
+import { useSelector } from 'react-redux'
+// routing
+import { useNavigate } from 'react-router-dom'
+// styles and ui
+import styles from './Home.module.css'
+// icons
 import { FaStreetView } from 'react-icons/fa'
 import { RiLeafLine } from 'react-icons/ri'
-import styles from './Home.module.css'
-import { useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+
+///
 
 const Home = () => {
   const redirect = useNavigate()

@@ -1,13 +1,19 @@
-import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import { reset } from '../../features/authSlice'
+// IMPORT
 
+// hooks
+import { useEffect } from 'react'
+// redux
+import { useDispatch, useSelector } from 'react-redux'
+import { reset } from '../../features/authSlice'
+// routing
+import { useNavigate } from 'react-router-dom'
+// styles and ui
 import styles from './Login.module.css'
 import Container from '../UI/Container/Container'
-
+// custom components
 import LoginForm from './LoginForm'
+
+///
 
 const Login = () => {
   const dispatch = useDispatch()

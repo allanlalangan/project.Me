@@ -1,9 +1,15 @@
-import React from 'react'
-import styles from './Header.module.css'
-import { FcBiomass } from 'react-icons/fc'
-import { Link } from 'react-router-dom'
+// IMPORT
 
+// routing
+import { Link } from 'react-router-dom'
+// styles and ui
+import styles from './Header.module.css'
+// custom components
 import Navbar from './Navbar'
+// icons
+import { FcBiomass } from 'react-icons/fc'
+
+///
 
 const Header = () => {
   return (

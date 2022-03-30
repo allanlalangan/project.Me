@@ -1,11 +1,18 @@
+// IMPORT
+
+// hooks
 import { useEffect } from 'react'
-import Container from '../UI/Container/Container'
-import styles from './Goals.module.css'
+// redux
 import { useSelector, useDispatch } from 'react-redux'
+import { getGoals, reset } from '../../features/goalsSlice'
+// styles and ui
+import styles from './Goals.module.css'
+import Container from '../UI/Container/Container'
+// custom components
 import NewGoal from './NewGoal/NewGoal'
 import GoalItem from './GoalItem/GoalItem'
 
-import { getGoals, reset } from '../../features/goalsSlice'
+///
 
 const Goals = () => {
   const dispatch = useDispatch()
