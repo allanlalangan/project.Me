@@ -1,90 +1,51 @@
-import { useState } from 'react'
-import { useDispatch } from 'react-redux'
+// IMPORT
+// useRegister hook
+import useRegister from './useRegister'
+// styles and ui
 import styles from './RegisterForm.module.css'
-
 import Button from '../UI/Button/Button'
-import { register } from '../../features/authSlice'
+// custom components
+import Input from '../Input/Input'
+
+///
 
 const RegisterForm = () => {
-  const dispatch = useDispatch()
-
-  const initialFormData = {
-    name: '',
-    email: '',
-    password: '',
-    passwordConfirm: '',
-  }
-  const [formData, setFormData] = useState(initialFormData)
-
-  const { name, email, password, passwordConfirm } = formData
-  const onInputChange = (e) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
-    }))
-  }
-
-  const handleRegister = (e) => {
-    e.preventDefault()
-
-    if (password !== passwordConfirm) {
-      console.log('Passwords do not match')
-    } else {
-      const userData = {
-        name,
-        email,
-        password,
-      }
-      dispatch(register(userData))
-    }
-  }
+  const { onInputChange, handleRegister } = useRegister()
 
   return (
     <form onSubmit={handleRegister} className={styles.form}>
       <fieldset className={styles['form-fieldset']}>
-        <label className={styles.label} htmlFor='name'>
-          Name
-        </label>
-        <input
-          className={`${styles['form-control']} ${styles['name-field']}`}
-          type='text'
-          id='name'
-          name='name'
+        <Input
           onChange={onInputChange}
-          placeholder={'Enter Name'}
+          type='text'
+          for='name'
+          placeholder='Enter name'
+          label='Name'
+          className={`${styles['name-field']}`}
         />
-        <label className={styles.label} htmlFor='email'>
-          Email
-        </label>
-        <input
-          className={`${styles['form-control']} ${styles['email-field']}`}
+        <Input
+          onChange={onInputChange}
           type='email'
-          id='email'
-          name='email'
-          onChange={onInputChange}
-          placeholder={'Enter email'}
+          for='email'
+          placeholder='Enter email'
+          label='Email'
+          className={`${styles['email-field']}`}
         />
-        <label className={styles.label} htmlFor='password'>
-          Password
-        </label>
-        <input
-          className={`${styles['form-control']} ${styles['pass-field']}`}
-          type='text'
-          id='password'
-          name='password'
+        <Input
           onChange={onInputChange}
-          placeholder={'Enter password'}
+          type='password'
+          for='password'
+          placeholder='Enter password'
+          label='Password'
+          className={`${styles['pass-field']}`}
         />
-        <label className={styles.label} htmlFor='passwordConfirm'>
-          Confirm Password
-        </label>
-        <input
-          className={`${styles['form-control']} ${styles['pass2-field']}`}
-          type='text'
-          id='passwordConfirm'
-          name='passwordConfirm'
+        <Input
           onChange={onInputChange}
-          placeholder={'Confirm password'}
+          type='password'
+          for='passwordConfirm'
+          placeholder='Confirm Password'
+          label='Confirm Password'
+          className={`${styles['pass2-field']}`}
         />
       </fieldset>
 

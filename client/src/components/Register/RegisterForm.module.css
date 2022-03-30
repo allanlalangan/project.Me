@@ -18,25 +18,14 @@
   border-color: var(--prim-acc);
 }
 
-.label {
-  display: none;
-}
-
-.form-control {
-  background-color: var(--ter-color);
-  font-size: 1rem;
-  padding: 1rem;
-  margin: 0.25rem;
-  border: none;
-}
-
+/* Top and bottom input fields have rounded borders */
 .name-field {
   border-radius: 0.25rem 0.25rem 0 0;
 }
-
 .pass2-field {
   border-radius: 0 0 0.25rem 0.25rem;
 }
+/*  */
 
 .register-btn {
   border-color: var(--sec-color);
