@@ -50,6 +50,7 @@ html {
 }
 
 body {
+  color: var(--prim-color);
   background-color: var(--light-bg);
   font-family: 'Barlow', sans-serif;
   /* font-family: 'Nunito Sans', sans-serif; */

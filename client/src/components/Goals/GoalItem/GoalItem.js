@@ -1,23 +1,31 @@
 // IMPORT
-
+import { useDispatch } from 'react-redux';
 // styles and ui
-import styles from './GoalItem.module.css'
-import Button from '../../UI/Button/Button'
+import styles from './GoalItem.module.css';
+import Button from '../../UI/Button/Button';
 // icons
-import { MdOutlineEditNote, MdDeleteForever } from 'react-icons/md'
+import { MdOutlineEditNote, MdDeleteForever } from 'react-icons/md';
 
 ///
 
 const GoalItem = (props) => {
+  const dispatch = useDispatch();
+  const onDelete = () => {};
   return (
     <li className={styles['goal-item']}>
       <div className={`${styles['goal-heading']}`}>
         <p className={`${styles['goal-title']}`}>{props.title}</p>
         <aside className={`${styles['goal-actions']}`}>
-          <Button className={`${styles['goal-action-btn']}`}>
+          <Button
+            onClick={() => console.log(props.id)}
+            className={`${styles['goal-action-btn']}`}
+          >
             <MdOutlineEditNote className={`${styles['goal-action-icon']}`} />
           </Button>
-          <Button className={`${styles['goal-action-btn']}`}>
+          <Button
+            onClick={() => console.log(props.id)}
+            className={`${styles['goal-action-btn']}`}
+          >
             <MdDeleteForever className={`${styles['goal-action-icon']}`} />
           </Button>
         </aside>
@@ -28,7 +36,7 @@ const GoalItem = (props) => {
         <p className={`${styles['goal-detail']}`}>Complete:</p>
       </div> */}
     </li>
-  )
-}
+  );
+};
 
-export default GoalItem
+export default GoalItem;

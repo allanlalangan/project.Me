@@ -39,7 +39,7 @@ const Goals = () => {
         ) : (
           <>
             {goals.map((goal) => (
-              <GoalItem key={goal._id} title={goal.title} />
+              <GoalItem id={goal._id} key={goal._id} title={goal.title} />
             ))}
           </>
         )}

@@ -1,6 +1,5 @@
 .goals-container {
   padding: 1rem 5rem;
-  color: var(--sec-color);
   width: 90vw;
   height: calc(90vh - 2.5rem);
 
@@ -11,7 +10,6 @@
 }
 
 .goals-heading {
-  color: var(--sec-color);
 }
 
 .goals-list {
