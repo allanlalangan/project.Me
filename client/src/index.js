@@ -1,10 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './global.css'
-import App from './App'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './globals.css';
+import App from './App';
 
-import { Provider } from 'react-redux'
-import store from './app/store'
+import { Provider } from 'react-redux';
+import store from './app/store';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,4 +13,4 @@ ReactDOM.render(
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
-)
+);

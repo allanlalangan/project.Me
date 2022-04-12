@@ -14,6 +14,10 @@
   color: var(--sec-color);
 }
 
-.register-msg {
+.register-message {
+  color: var(--prim-acc);
+}
+
+.loading-message {
   color: var(--sec-color);
 }

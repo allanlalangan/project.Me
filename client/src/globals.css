@@ -17,21 +17,25 @@
 
 /* STYLE VARIABLES */
 :root {
-  --prim-color: hsl(185, 20%, 15%);
-  --sec-color: hsla(90, 100%, 70%, 1);
-  --ter-color: hsla(44, 100%, 90%, 1);
-  --prim-acc: hsla(180, 25%, 55%, 1);
+  --light-bg: hsl(210, 25%, 95%);
+  --prim-color: hsl(185, 40%, 25%);
+  --sec-color: hsl(90, 100%, 70%);
+  --ter-color: hsl(44, 100%, 90%);
+  --prim-acc: hsl(180, 25%, 55%);
 
   --header-shadow: 0px 0.25rem 1rem 0.25rem rgba(0, 0, 0, 0.2);
-  --box-shadow: 0px 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+  --box-shadow: 0px 0.25rem 0.5rem 0.05rem rgba(0, 0, 0, 0.2);
   --box-inset: inset 0px 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+
+  --dot-grid: hsla(180, 25%, 55%, 1);
 }
 
 input {
   font-family: inherit;
-  box-shadow: var(--box-inset);
 }
 button {
+  margin: 0;
+  border: none;
   font-family: inherit;
   cursor: pointer;
 }
@@ -46,7 +50,7 @@ html {
 }
 
 body {
-  background-color: var(--prim-color);
+  background-color: var(--light-bg);
   font-family: 'Barlow', sans-serif;
   /* font-family: 'Nunito Sans', sans-serif; */
   /* font-family: 'Zilla Slab'; */
@@ -56,7 +60,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+fieldset {
+  border: none;
 }

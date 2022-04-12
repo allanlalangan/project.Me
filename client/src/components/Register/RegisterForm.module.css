@@ -12,8 +12,8 @@
   align-items: center;
   justify-content: center;
 
-  padding: 2rem;
-  border: 1px solid;
+  /* padding: 2rem; */
+  /* border: 1px solid; */
   border-radius: 1rem;
   border-color: var(--prim-acc);
 }

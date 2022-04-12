@@ -3,6 +3,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 75%;
+}
+
+.login-heading {
+  color: var(--prim-color);
 }
 
 .form-fieldset {
@@ -12,9 +17,9 @@
   align-items: center;
   justify-content: center;
 
-  padding: 2rem;
+  padding: 1rem;
   border: 1px solid;
-  border-radius: 1rem;
+  border-radius: 1rem 0 1rem 0;
   border-color: var(--prim-acc);
 }
 
@@ -22,24 +27,22 @@
   display: none;
 }
 
-.form-control {
-  background-color: var(--ter-color);
-  font-size: 1rem;
+.form-controls {
   padding: 1rem;
-  margin: 0.25rem;
-  border: none;
 }
 
 .email-field {
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.5rem 0 0 0;
 }
 
 .pass-field {
-  border-radius: 0 0 0.25rem 0.25rem;
+  border-radius: 0 0 0.5rem 0;
 }
 
 .login-btn {
-  border-radius: 0.5rem;
+  background-color: transparent;
+  border: 1px solid var(--prim-acc);
+  border-radius: 0.5rem 0 0.5rem 0;
   padding: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;

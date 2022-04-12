@@ -1,6 +1,6 @@
 .card-container {
-  background-color: var(--prim-color);
-  border: solid 1px var(--prim-acc);
-  border-radius: 1rem;
+  background-color: var(--light-bg);
+  /* border: solid 1px var(--prim-acc); */
+  border-radius: 1rem 0 1rem 0;
   box-shadow: var(--box-shadow);
 }
