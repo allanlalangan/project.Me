@@ -1,28 +1,30 @@
 // IMPORT
 // hooks
-import { useState } from 'react'
+import { useState } from 'react';
 // redux
-import { useDispatch } from 'react-redux'
-import { addGoal } from '../../../features/goalsSlice'
+import { useDispatch } from 'react-redux';
+import { addGoal } from '../../../features/goalsSlice';
 
 ///
 
 const useNewGoal = () => {
-  const dispatch = useDispatch()
-  const [addGoalText, setAddGoalText] = useState('')
+  const dispatch = useDispatch();
+  const [addGoalText, setAddGoalText] = useState('');
 
   const handleAddGoalTextChange = (e) => {
-    setAddGoalText(e.target.value)
-  }
+    setAddGoalText(e.target.value);
+  };
 
   const handleAddGoal = (e) => {
-    e.preventDefault()
-    const formData = { title: addGoalText }
-    dispatch(addGoal(formData))
-    setAddGoalText('')
-  }
+    e.preventDefault();
+    if (addGoalText.trim() !== '') {
+      const formData = { title: addGoalText };
+      dispatch(addGoal(formData));
+      setAddGoalText('');
+    } else return;
+  };
 
-  return { handleAddGoal, handleAddGoalTextChange, addGoalText }
-}
+  return { handleAddGoal, handleAddGoalTextChange, addGoalText };
+};
 
-export default useNewGoal
+export default useNewGoal;

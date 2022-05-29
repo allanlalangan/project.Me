@@ -18,12 +18,12 @@ const getGoals = createAsyncThunk('goals/getGoals', async (_, thunkAPI) => {
       },
     };
 
-    const response = await axios.get('/api/goals', config);
-    return response.data;
+    const resp = await axios.get('/api/goals', config);
+    return resp.data;
   } catch (error) {
     console.log('ERROR GETGOALS getGoals asyncThunk throw error');
     // const message =
-    //   (error.response && error.response.data && error.response.data.message) ||
+    //   (error.resp && error.resp.data && error.resp.data.message) ||
     //   error.message ||
     //   error.toString()
     return thunkAPI.rejectWithValue(error.toString());
@@ -41,8 +41,8 @@ const addGoal = createAsyncThunk(
         },
       };
 
-      const response = await axios.post('/api/goals', formData, config);
-      return response.data;
+      const resp = await axios.post('/api/goals', formData, config);
+      return resp.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.toString());
     }
@@ -58,7 +58,8 @@ const deleteGoal = createAsyncThunk('goals/delete', async (id, thunkAPI) => {
       },
     };
 
-    const response = await axios.delete(`/api/goals/${id}`, config);
+    const resp = await axios.delete(`/api/goals/${id}`, config);
+    return resp.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.toString());
   }
@@ -99,10 +100,25 @@ const goalsSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
+      })
+      .addCase(deleteGoal.pending, (state, action) => {
+        state.isLoading = true;
+      })
+      .addCase(deleteGoal.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.goals = state.goals.filter(
+          (goal) => goal._id !== action.payload.id
+        );
+      })
+      .addCase(deleteGoal.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
       });
   },
 });
 
 export default goalsSlice.reducer;
 export const { reset } = goalsSlice.actions;
-export { getGoals, addGoal };
+export { getGoals, addGoal, deleteGoal };
