@@ -1,4 +1,4 @@
-.login-container {
+/* .login-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -6,7 +6,7 @@
 
   width: 60vw;
   height: 60vh;
-  /* padding: 1rem; */
+
 }
 
 .login-banner {
@@ -16,4 +16,4 @@
   border-radius: 1rem 0 0 0;
 }
 .login-msg {
-}
+} */
