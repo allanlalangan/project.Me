@@ -1,0 +1,25 @@
+$prim: hsl(240, 75%, 60%);
+$sec: hsl(215, 85%, 50%);
+$ter: hsl(345, 75%, 60%);
+// $ter: hsl(205, 60%, 60%);
+$text: hsl(220, 25%, 15%);
+$contrastText: hsl(230, 75%, 95%);
+
+$bg: hsl(205, 60%, 90%);
+$bg--dark: hsl(230, 35%, 25%);
+$headerBg: hsl(220, 70%, 85%);
+
+$divider: hsl(215, 75%, 80%);
+
+$success: hsl(140, 65%, 65%);
+$error: hsl(0, 75%, 60%);
+$info: hsl(200, 65%, 65%);
+
+$gradientBg: linear-gradient(
+  30deg,
+  hsl(220, 95%, 80%) 0%,
+  hsl(220, 70%, 85%) 25%,
+
+  $bg 85%,
+  hsl(220, 90%, 80%) 100%
+);

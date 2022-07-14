@@ -1,28 +1,28 @@
 // IMPORT
 
 // redux
-import { useSelector, useDispatch } from 'react-redux'
-import { logout, reset } from '../../../features/authSlice'
+import { useSelector, useDispatch } from 'react-redux';
+import { logout, reset } from '../../../features/authSlice';
 // routing
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom';
 // styles and ui
-import styles from './Navbar.module.css'
+import styles from './Navbar.module.scss';
 // icons
-import { FcTodoList, FcSettings, FcKey, FcGoodDecision } from 'react-icons/fc'
-import { MdLogout } from 'react-icons/md'
+import { FcTodoList, FcSettings, FcKey, FcGoodDecision } from 'react-icons/fc';
+import { MdLogout } from 'react-icons/md';
 
 ///
 
 const Navbar = () => {
-  const user = useSelector((state) => state.auth.user)
-  const dispatch = useDispatch()
-  const redirect = useNavigate()
+  const user = useSelector((state) => state.auth.user);
+  const dispatch = useDispatch();
+  const redirect = useNavigate();
 
   const logoutHandler = () => {
-    dispatch(logout())
-    dispatch(reset())
-    redirect('/')
-  }
+    dispatch(logout());
+    dispatch(reset());
+    redirect('/');
+  };
 
   return (
     <nav className={styles['main-nav']}>
@@ -31,12 +31,16 @@ const Navbar = () => {
           <>
             <li>
               <Link to='/login'>
-                <FcKey className={styles['link-icons']} />
+                <button>
+                  <FcKey className={styles['link-icons']} />
+                </button>
               </Link>
             </li>
             <li>
               <Link to='/register'>
-                <FcGoodDecision className={styles['link-icons']} />
+                <button>
+                  <FcGoodDecision className={styles['link-icons']} />
+                </button>
               </Link>
             </li>
           </>
@@ -46,7 +50,9 @@ const Navbar = () => {
           <>
             <li>
               <Link to='/goals'>
-                <FcTodoList className={styles['link-icons']} />
+                <button>
+                  <FcTodoList className={styles['link-icons']} />
+                </button>
               </Link>
             </li>
             <li>
@@ -65,7 +71,7 @@ const Navbar = () => {
         )}
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
