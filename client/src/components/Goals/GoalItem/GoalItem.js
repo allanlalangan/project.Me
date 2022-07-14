@@ -12,6 +12,7 @@ import { MdOutlineEditNote, MdDeleteForever } from 'react-icons/md';
 const GoalItem = (props) => {
   const dispatch = useDispatch();
   const onDelete = (e) => {
+    // console.log(props.id);
     dispatch(deleteGoal(props.id));
   };
   return (

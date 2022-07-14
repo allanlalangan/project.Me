@@ -73,8 +73,7 @@ const deleteGoal = async (req, res) => {
     res.status(200).json({
       message: `${req.user.name}'s goals updated`,
       deletedGoalID: req.params.id,
-      goals: await Goal.find({ user: req.user.id.toString() }),
-      // The generated _id is a mongoDB function that must be converted toString
+      goals: await Goal.find({ user: req.user.id }),
     });
   } catch (error) {
     res.status(500).send(error.message);
