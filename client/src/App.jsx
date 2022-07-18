@@ -7,9 +7,6 @@ import DashboardPage from './pages/dashboard';
 import GoalsPage from './pages/goals';
 
 import Header from './components/Layout/Header/Header';
-// import Login from './components/Login/Login'
-// import Goals from './components/Goals/Goals'
-// import Register from './components/Register/Register'
 
 import styles from './App.module.scss';
 

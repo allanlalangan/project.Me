@@ -3,7 +3,6 @@
 import useNewGoal from './useNewGoal';
 // styles and ui
 import styles from './NewGoalForm.module.scss';
-import Button from '../../UI/Button/Button';
 
 ///
 
@@ -22,9 +21,9 @@ const NewGoalForm = (props) => {
         placeholder='I want to...'
         className={`${styles['new-goal-input']}`}
       />
-      <Button className={`${styles['add-goal-btn']}`} type='submit'>
+      <button className={`${styles['add-goal-btn']}`} type='submit'>
         Add Goal
-      </Button>
+      </button>
     </form>
   );
 };

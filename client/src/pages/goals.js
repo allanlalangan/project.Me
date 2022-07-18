@@ -1,11 +1,11 @@
-import Goals from '../components/Goals/Goals'
+import Goals from '../components/Goals/Goals';
 
-const goals = () => {
+const Goals_page = () => {
   return (
     <>
       <Goals />
     </>
-  )
-}
+  );
+};
 
-export default goals
+export default Goals_page;

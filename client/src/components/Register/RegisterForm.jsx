@@ -4,7 +4,6 @@
 import useRegister from './useRegister';
 // styles and ui
 import styles from './RegisterForm.module.scss';
-import Button from '../UI/Button/Button';
 // custom components
 import InputControlText from '../Input/InputControlText';
 
@@ -50,9 +49,9 @@ const RegisterForm = () => {
         />
       </fieldset>
 
-      <Button className={`${styles['create-user-btn']}`} type='submit'>
+      <button className={`${styles['create-user-btn']}`} type='submit'>
         Create User
-      </Button>
+      </button>
     </form>
   );
 };

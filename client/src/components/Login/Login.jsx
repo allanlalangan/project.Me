@@ -9,7 +9,7 @@ import { reset } from '../../features/authSlice';
 import { useNavigate } from 'react-router-dom';
 // styles and ui
 import styles from './Login.module.scss';
-import Container from '../UI/Container/Container';
+
 // custom components
 import LoginForm from './LoginForm';
 
@@ -35,7 +35,7 @@ const Login = () => {
   }, [user, isError, isSuccess, message, dispatch, redirect]);
 
   return (
-    <Container className={styles['login-container']}>
+    <section className={styles['login-container']}>
       <aside className={styles['login-banner']}></aside>
       {isLoading ? (
         <h2 className={styles['register-msg']}>Loading</h2>
@@ -44,7 +44,7 @@ const Login = () => {
           <LoginForm />
         </>
       )}
-    </Container>
+    </section>
   );
 };
 

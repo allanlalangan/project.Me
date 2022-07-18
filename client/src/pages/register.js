@@ -1,11 +1,11 @@
-import Register from '../components/Register/Register'
+import Register from '../components/Register/Register';
 
-const register = () => {
+const Register_page = () => {
   return (
     <>
       <Register />
     </>
-  )
-}
+  );
+};
 
-export default register
+export default Register_page;

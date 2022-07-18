@@ -2,7 +2,7 @@
 
 // styles and ui
 import styles from './NewGoal.module.scss';
-import Container from '../../UI/Container/Container';
+
 // custom components
 import NewGoalForm from './NewGoalForm';
 
@@ -10,10 +10,10 @@ import NewGoalForm from './NewGoalForm';
 
 const NewGoal = () => {
   return (
-    <Container className={styles['new-goal']}>
+    <section className={styles['new-goal']}>
       <h3>Set a new goal</h3>
       <NewGoalForm />
-    </Container>
+    </section>
   );
 };
 

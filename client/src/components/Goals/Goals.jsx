@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getGoals, reset } from '../../features/goalsSlice';
 // styles and ui
 import styles from './Goals.module.scss';
-import Container from '../UI/Container/Container';
+
 // custom components
 import NewGoal from './NewGoal/NewGoal';
 import GoalItem from './GoalItem/GoalItem';
@@ -31,7 +31,7 @@ const Goals = () => {
   }, [dispatch, user]);
 
   return (
-    <Container className={styles['goals-container']}>
+    <section className={styles['goals-container']}>
       <ul className={`${styles['goals-list']}`}>
         <h2 className={styles['goals-heading']}>Goals</h2>
         {isLoading || isError ? (
@@ -45,7 +45,7 @@ const Goals = () => {
         )}
       </ul>
       <NewGoal />
-    </Container>
+    </section>
   );
 };
 

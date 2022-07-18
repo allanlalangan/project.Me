@@ -9,7 +9,6 @@ import { reset } from '../../features/authSlice';
 import { useNavigate } from 'react-router-dom';
 // styles and ui
 import styles from './Register.module.scss';
-import Container from '../UI/Container/Container';
 // custom components
 import RegisterForm from './RegisterForm';
 
@@ -38,7 +37,7 @@ const Register = () => {
   }, [user, isError, isSuccess, message, dispatch, redirect]);
 
   return (
-    <Container className={styles['register-container']}>
+    <section className={styles['register-container']}>
       {isLoading ? (
         <h2 className={styles['loading-message']}>Loading</h2>
       ) : (
@@ -52,7 +51,7 @@ const Register = () => {
           <RegisterForm />
         </>
       )}
-    </Container>
+    </section>
   );
 };
 

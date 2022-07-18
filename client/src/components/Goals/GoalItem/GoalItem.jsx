@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { deleteGoal } from '../../../features/goalsSlice';
 // styles and ui
 import styles from './GoalItem.module.scss';
-import Button from '../../UI/Button/Button';
 // icons
 import { MdOutlineEditNote, MdDeleteForever } from 'react-icons/md';
 
@@ -20,15 +19,15 @@ const GoalItem = (props) => {
       <div className={`${styles['goal-heading']}`}>
         <p className={`${styles['goal-title']}`}>{props.title}</p>
         <aside className={`${styles['goal-actions']}`}>
-          <Button
+          <button
             onClick={() => console.log(props.id)}
             className={`${styles['goal-action-btn']}`}
           >
             <MdOutlineEditNote className={`${styles['goal-action-icon']}`} />
-          </Button>
-          <Button onClick={onDelete} className={`${styles['goal-action-btn']}`}>
+          </button>
+          <button onClick={onDelete} className={`${styles['goal-action-btn']}`}>
             <MdDeleteForever className={`${styles['goal-action-icon']}`} />
-          </Button>
+          </button>
         </aside>
       </div>
       {/* <div className={`${styles['goal-details']}`}>

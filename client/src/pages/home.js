@@ -1,11 +1,9 @@
-import Home from '../components/UI/Home';
-
-const home = () => {
+const Home_page = () => {
   return (
     <>
-      <Home />
+      <h1>Please Login</h1>
     </>
   );
 };
 
-export default home;
+export default Home_page;
