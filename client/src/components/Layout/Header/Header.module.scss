@@ -4,9 +4,15 @@
 
 .main-header {
   width: 100%;
-  height: var.$height__header;
-
   background-color: colors.$bg;
+  // border-bottom: 2px solid colors.$sec;
+  display: grid;
+}
 
-  @include mixins.flex(row, space-between, center);
+.logo {
+  grid-column: 1 / 4;
+}
+
+.navbar {
+  grid-column: 4 / 13;
 }

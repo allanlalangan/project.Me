@@ -7,15 +7,19 @@ import DashboardPage from './pages/dashboard';
 import GoalsPage from './pages/goals';
 
 import Header from './components/Layout/Header/Header';
+import Sidebar from './components/Layout/Sidebar/Sidebar';
 
 import styles from './App.module.scss';
+import Navbar from './components/Layout/Header/Navbar';
 
 const App = () => {
   return (
-    <main className={styles['app-container']}>
+    <div className={styles['container']}>
       <Router>
-        <Header />
-        <section className={styles.page}>
+        <Header gridItem={styles.header} />
+        <Navbar gridItem={styles.navbar} />
+        <Sidebar gridItem={styles.sidebar} />
+        <main className={styles.page}>
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/register' element={<RegisterPage />} />
@@ -23,9 +27,9 @@ const App = () => {
             <Route path='/dashboard' element={<DashboardPage />} />
             <Route path='/goals' element={<GoalsPage />} />
           </Routes>
-        </section>
+        </main>
       </Router>
-    </main>
+    </div>
   );
 };
 

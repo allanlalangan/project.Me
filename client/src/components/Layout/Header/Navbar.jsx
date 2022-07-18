@@ -13,7 +13,7 @@ import { MdLogout } from 'react-icons/md';
 
 ///
 
-const Navbar = () => {
+const Navbar = ({ gridItem }) => {
   const user = useSelector((state) => state.auth.user);
   const dispatch = useDispatch();
   const redirect = useNavigate();
@@ -25,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={styles['main-nav']}>
+    <nav className={`${gridItem} ${styles['main-nav']}`}>
       <ul>
         {!user && (
           <>

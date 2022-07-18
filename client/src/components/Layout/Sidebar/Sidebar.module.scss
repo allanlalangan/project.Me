@@ -1,0 +1,10 @@
+@use '../../../scss/abstracts/colors' as colors;
+@use '../../../scss/abstracts/mixins' as mixins;
+@use '../../../scss/abstracts/variables' as var;
+
+.container {
+  height: 100%;
+  background-color: colors.$bg;
+
+  // @include mixins.shadow(1px, 0, 5px, 1px, 0.25);
+}

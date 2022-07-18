@@ -11,15 +11,14 @@ import { FcBiomass } from 'react-icons/fc';
 
 ///
 
-const Header = () => {
+const Header = ({ gridItem }) => {
   return (
-    <header className={styles['main-header']}>
-      <section className={styles['logo-container']}>
+    <header className={`${gridItem} ${styles['main-header']}`}>
+      <section className={styles['logo']}>
         <Link to='/'>
           <h1 className={styles['main-title']}>project.Me</h1>
         </Link>
       </section>
-      <Navbar />
     </header>
   );
 };

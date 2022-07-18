@@ -1,7 +1,37 @@
+@use './scss/abstracts/mixins' as mixins;
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.header {
+  z-index: 10;
+  @include mixins.breakpoint('>=xs') {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+  }
+}
+.navbar {
+  z-index: 10;
+  @include mixins.breakpoint('>=xs') {
+    grid-column: 10 / 13;
+    grid-row: 1 / 2;
+  }
+}
+.sidebar {
+  @include mixins.breakpoint('>=xs') {
+    grid-column: 1 / 4;
+    grid-row: 2 / 13;
+  }
+}
+
 .page {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  @include mixins.breakpoint('>=xs') {
+    grid-column: 4 / 13;
+    grid-row: 2 / 13;
+  }
+  @include mixins.flex(column, space-around, center);
 }
