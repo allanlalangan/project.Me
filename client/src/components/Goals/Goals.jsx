@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getGoals, reset } from '../../features/goalsSlice';
 // styles and ui
-import styles from './Goals.module.css';
+import styles from './Goals.module.scss';
 import Container from '../UI/Container/Container';
 // custom components
 import NewGoal from './NewGoal/NewGoal';

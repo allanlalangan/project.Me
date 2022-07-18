@@ -8,7 +8,7 @@ import { reset } from '../../features/authSlice';
 // routing
 import { useNavigate } from 'react-router-dom';
 // styles and ui
-import styles from './Register.module.css';
+import styles from './Register.module.scss';
 import Container from '../UI/Container/Container';
 // custom components
 import RegisterForm from './RegisterForm';

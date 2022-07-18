@@ -1,7 +1,7 @@
 // IMPORT
 
 // styles and ui
-import styles from './Container.module.css'
+import styles from './Container.module.scss';
 
 ///
 
@@ -10,7 +10,7 @@ const Container = (props) => {
     <div className={`${styles['card-container']} ${props.className}`}>
       {props.children}
     </div>
-  )
-}
+  );
+};
 
-export default Container
+export default Container;

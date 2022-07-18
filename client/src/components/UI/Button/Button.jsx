@@ -1,7 +1,7 @@
 // IMPORT
 
 // styles and ui
-import styles from './Button.module.css'
+import styles from './Button.module.scss';
 
 ///
 
@@ -10,7 +10,7 @@ const Button = (props) => {
     <button {...props} className={`${styles.button} ${props.className}`}>
       {props.children}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

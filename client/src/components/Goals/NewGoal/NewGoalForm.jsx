@@ -2,7 +2,7 @@
 // useNewGoal hook
 import useNewGoal from './useNewGoal';
 // styles and ui
-import styles from './NewGoalForm.module.css';
+import styles from './NewGoalForm.module.scss';
 import Button from '../../UI/Button/Button';
 
 ///

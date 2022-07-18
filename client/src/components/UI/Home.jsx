@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 // routing
 import { useNavigate } from 'react-router-dom';
 // styles and ui
-import styles from './Home.module.css';
+import styles from './Home.module.scss';
 // icons
 import { RiLeafLine } from 'react-icons/ri';
 

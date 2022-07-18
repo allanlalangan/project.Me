@@ -3,7 +3,7 @@
 // useLogin hook
 import useLogin from './useLogin';
 // styles and ui
-import styles from './LoginForm.module.css';
+import styles from './LoginForm.module.scss';
 import Button from '../UI/Button/Button';
 // custom components
 import InputControlText from '../Input/InputControlText';

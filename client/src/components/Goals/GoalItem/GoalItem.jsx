@@ -2,7 +2,7 @@
 import { useDispatch } from 'react-redux';
 import { deleteGoal } from '../../../features/goalsSlice';
 // styles and ui
-import styles from './GoalItem.module.css';
+import styles from './GoalItem.module.scss';
 import Button from '../../UI/Button/Button';
 // icons
 import { MdOutlineEditNote, MdDeleteForever } from 'react-icons/md';

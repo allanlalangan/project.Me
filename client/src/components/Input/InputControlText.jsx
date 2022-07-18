@@ -1,5 +1,5 @@
 // styles and ui
-import styles from './InputControlText.module.css'
+import styles from './InputControlText.module.scss';
 
 const InputControlText = (props) => {
   return (
@@ -19,7 +19,7 @@ const InputControlText = (props) => {
         placeholder={props.placeholder}
       />
     </div>
-  )
-}
+  );
+};
 
-export default InputControlText
+export default InputControlText;

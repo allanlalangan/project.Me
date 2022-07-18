@@ -1,7 +1,7 @@
 // IMPORT
 
 // styles and ui
-import styles from './NewGoal.module.css';
+import styles from './NewGoal.module.scss';
 import Container from '../../UI/Container/Container';
 // custom components
 import NewGoalForm from './NewGoalForm';

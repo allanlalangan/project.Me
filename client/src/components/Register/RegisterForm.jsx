@@ -1,17 +1,17 @@
 // IMPORT
 
 // useRegister hook
-import useRegister from './useRegister'
+import useRegister from './useRegister';
 // styles and ui
-import styles from './RegisterForm.module.css'
-import Button from '../UI/Button/Button'
+import styles from './RegisterForm.module.scss';
+import Button from '../UI/Button/Button';
 // custom components
-import InputControlText from '../Input/InputControlText'
+import InputControlText from '../Input/InputControlText';
 
 ///
 
 const RegisterForm = () => {
-  const { onInputChange, handleRegister } = useRegister()
+  const { onInputChange, handleRegister } = useRegister();
 
   return (
     <form onSubmit={handleRegister} className={styles.form}>
@@ -54,7 +54,7 @@ const RegisterForm = () => {
         Create User
       </Button>
     </form>
-  )
-}
+  );
+};
 
-export default RegisterForm
+export default RegisterForm;
