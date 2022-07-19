@@ -31,16 +31,12 @@ const Navbar = ({ gridItem }) => {
           <>
             <li>
               <Link to='/login'>
-                <button>
-                  <FcKey className={styles['link-icons']} />
-                </button>
+                <button>Login</button>
               </Link>
             </li>
             <li>
               <Link to='/register'>
-                <button>
-                  <FcGoodDecision className={styles['link-icons']} />
-                </button>
+                <button>Create an account</button>
               </Link>
             </li>
           </>
@@ -49,22 +45,11 @@ const Navbar = ({ gridItem }) => {
         {user && (
           <>
             <li>
-              <Link to='/goals'>
-                <button>
-                  <FcTodoList className={styles['link-icons']} />
-                </button>
-              </Link>
-            </li>
-            <li>
-              <Link to='/'>
-                <FcSettings className={styles['link-icons']} />
-              </Link>
+              <Link to='/'>Settings</Link>
             </li>
             <li>
               <button onClick={logoutHandler} className={styles['logout-btn']}>
-                <MdLogout
-                  className={`${styles['link-icons']} ${styles['logout-icon']}`}
-                />
+                Logout
               </button>
             </li>
           </>
