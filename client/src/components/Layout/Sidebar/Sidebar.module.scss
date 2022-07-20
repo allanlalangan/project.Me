@@ -8,3 +8,17 @@
 
   // @include mixins.shadow(1px, 0, 5px, 1px, 0.25);
 }
+
+.links {
+  width: 100%;
+  padding: 1rem 0;
+  .links__link {
+    @include mixins.flex(column, center, center);
+    width: 100%;
+    margin: auto;
+  }
+}
+.goals-button {
+  width: calc(100% - 4rem);
+  @include mixins.filled-button(colors.$prim, 1rem);
+}

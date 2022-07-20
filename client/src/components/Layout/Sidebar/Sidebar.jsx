@@ -4,9 +4,11 @@ import styles from './Sidebar.module.scss';
 const Sidebar = ({ gridItem }) => {
   return (
     <section className={`${gridItem} ${styles.container}`}>
-      <ul>
+      <ul className={styles.links}>
         <Link to='/goals'>
-          <li>Goals</li>
+          <li className={styles.links__link}>
+            <button className={styles['goals-button']}>Goals</button>
+          </li>
         </Link>
       </ul>
     </section>
