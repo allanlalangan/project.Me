@@ -1,21 +1,15 @@
-/* .goals-container {
-  padding: 1rem 5rem;
-  width: 90vw;
-  height: calc(90vh - 2.5rem);
+@use '../../scss/abstracts/colors' as colors;
+@use '../../scss/abstracts/variables' as var;
+@use '../../scss/abstracts/mixins' as mixins;
 
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
+.goals-container {
+  background-color: colors.$bg;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .goals-heading {
 }
 
 .goals-list {
-  width: 50%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: space-evenly;
-  justify-content: center;
-} */
+}

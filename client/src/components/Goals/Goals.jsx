@@ -9,7 +9,7 @@ import { getGoals, reset } from '../../features/goalsSlice';
 import styles from './Goals.module.scss';
 
 // custom components
-import NewGoal from './NewGoal/NewGoal';
+
 import GoalItem from './GoalItem/GoalItem';
 
 ///
@@ -33,9 +33,9 @@ const Goals = () => {
   return (
     <section className={styles['goals-container']}>
       <ul className={`${styles['goals-list']}`}>
-        <h2 className={styles['goals-heading']}>Goals</h2>
-        {isLoading || isError ? (
-          <p>{message}</p>
+        {(isLoading || isError) && <p>{message}</p>}
+        {goals?.length === 0 ? (
+          <p>No Goals</p>
         ) : (
           <>
             {goals.map((goal) => (
@@ -44,7 +44,6 @@ const Goals = () => {
           </>
         )}
       </ul>
-      <NewGoal />
     </section>
   );
 };
