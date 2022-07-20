@@ -27,6 +27,7 @@ h2,
 h3,
 h4,
 p,
+ul,
 figure,
 blockquote,
 dl,
@@ -43,6 +44,10 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+fieldset {
+  border: none;
 }
 
 img {

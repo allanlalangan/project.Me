@@ -8,27 +8,29 @@ import useNewGoal from './useNewGoal';
 
 ///
 
-const NewGoal = () => {
+const NewGoal = ({ gridItem }) => {
   const { handleAddGoal, handleAddGoalTextChange, addGoalText } = useNewGoal();
   return (
-    <section className={styles['new-goal']}>
+    <article className={`${gridItem} ${styles['container']}`}>
       <h3>Set a new goal</h3>
-      <form onSubmit={handleAddGoal} className={styles['new-goal-form']}>
-        <label htmlFor='title'></label>
-        <input
-          value={addGoalText}
-          onChange={handleAddGoalTextChange}
-          type='text'
-          id='title'
-          name='title'
-          placeholder='I want to...'
-          className={`${styles['new-goal-input']}`}
-        />
-        <button className={`${styles['add-goal-btn']}`} type='submit'>
+      <form onSubmit={handleAddGoal} className={styles['new-goal__form']}>
+        <fieldset className={styles['new-goal__fieldset']}>
+          <label htmlFor='title'></label>
+          <input
+            value={addGoalText}
+            onChange={handleAddGoalTextChange}
+            type='text'
+            id='title'
+            name='title'
+            placeholder='I want to...'
+            className={`${styles['new-goal__input']}`}
+          />
+        </fieldset>
+        <button className={`${styles['add-goal__btn']}`} type='submit'>
           Add Goal
         </button>
       </form>
-    </section>
+    </article>
   );
 };
 

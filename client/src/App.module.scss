@@ -29,9 +29,10 @@
 }
 
 .page {
+  padding: 1rem;
+
   @include mixins.breakpoint('>=xs') {
     grid-column: 4 / 13;
     grid-row: 2 / 13;
   }
-  @include mixins.flex(column, space-around, center);
 }

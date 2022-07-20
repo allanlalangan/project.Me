@@ -2,14 +2,8 @@
 @use '../../scss/abstracts/variables' as var;
 @use '../../scss/abstracts/mixins' as mixins;
 
-.goals-container {
+.goals-list {
   background-color: colors.$bg;
   padding: 1rem;
   border-radius: 0.5rem;
-}
-
-.goals-heading {
-}
-
-.goals-list {
 }

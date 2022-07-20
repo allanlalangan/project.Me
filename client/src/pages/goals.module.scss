@@ -1,0 +1,18 @@
+@use '../scss/abstracts/colors' as colors;
+@use '../scss/abstracts/mixins' as mixins;
+@use '../scss/abstracts/variables' as var;
+
+.container {
+  // @include mixins.flex(column, center, flex-start);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.goals {
+  grid-column: 1 / 7;
+}
+
+.new-goal {
+  grid-column: 7 / 13;
+}

@@ -14,7 +14,7 @@ import GoalItem from './GoalItem/GoalItem';
 
 ///
 
-const Goals = () => {
+const Goals = ({ gridItem }) => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   const { goals, isError, isLoading, message } = useSelector(
@@ -31,20 +31,18 @@ const Goals = () => {
   }, [dispatch, user]);
 
   return (
-    <section className={styles['goals-container']}>
-      <ul className={`${styles['goals-list']}`}>
-        {(isLoading || isError) && <p>{message}</p>}
-        {goals?.length === 0 ? (
-          <p>No Goals</p>
-        ) : (
-          <>
-            {goals.map((goal) => (
-              <GoalItem id={goal._id} key={goal._id} title={goal.title} />
-            ))}
-          </>
-        )}
-      </ul>
-    </section>
+    <ul className={`${gridItem} ${styles['goals-list']}`}>
+      {(isLoading || isError) && <p>{message}</p>}
+      {goals?.length === 0 ? (
+        <p>No Goals</p>
+      ) : (
+        <>
+          {goals.map((goal) => (
+            <GoalItem id={goal._id} key={goal._id} title={goal.title} />
+          ))}
+        </>
+      )}
+    </ul>
   );
 };
 

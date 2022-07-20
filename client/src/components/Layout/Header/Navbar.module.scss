@@ -2,16 +2,19 @@
 @use '../../../scss/abstracts/mixins' as mixins;
 @use '../../../scss/abstracts/colors' as colors;
 
-/* .main-nav {
-  width: 50%;
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-} */
+.main-nav {
+  background-color: colors.$bg;
+}
 
 .main-nav ul {
-  @include mixins.flex();
+  height: 100%;
+  @include mixins.flex(row, space-around, center);
+}
+
+.links {
+  .__link {
+    padding: 0 1rem;
+  }
 }
 
 /* .main-nav li {

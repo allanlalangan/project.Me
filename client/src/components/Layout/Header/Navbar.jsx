@@ -26,19 +26,19 @@ const Navbar = ({ gridItem }) => {
 
   return (
     <nav className={`${gridItem} ${styles['main-nav']}`}>
-      <ul>
+      <ul className={styles.links}>
         {!user && (
           <>
-            <li>
-              <Link to='/login'>
+            <Link to='/login'>
+              <li className={styles.__link}>
                 <button>Login</button>
-              </Link>
-            </li>
-            <li>
-              <Link to='/register'>
+              </li>
+            </Link>
+            <Link to='/register'>
+              <li className={styles.__link}>
                 <button>Create an account</button>
-              </Link>
-            </li>
+              </li>
+            </Link>
           </>
         )}
 
