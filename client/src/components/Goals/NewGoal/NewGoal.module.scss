@@ -12,6 +12,10 @@
 .new-goal__form {
 }
 
+.heading {
+  padding-bottom: 1rem;
+}
+
 .new-goal__fieldset {
   padding: 1rem;
   border: 1px solid colors.$prim;
@@ -41,6 +45,7 @@
 }
 
 .add-goal__btn {
+  width: 100%;
   margin-top: 1rem;
   @include mixins.filled-button(colors.$prim, 0.5rem);
 }

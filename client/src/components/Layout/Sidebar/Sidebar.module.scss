@@ -19,6 +19,6 @@
   }
 }
 .goals-button {
-  width: calc(100% - 4rem);
-  @include mixins.filled-button(colors.$prim, 1rem);
+  width: calc(100% - 2rem);
+  @include mixins.filled-button(colors.$prim, 0.5rem);
 }
