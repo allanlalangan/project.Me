@@ -1,53 +1,12 @@
-/* .goal-item {
-  padding: 1rem;
+@use '../../../scss/abstracts/colors' as colors;
+@use '../../../scss/abstracts/mixins' as mixins;
+@use '../../../scss/abstracts/variables' as var;
+
+.goal-item {
   width: 100%;
-  list-style: none;
-  border: 1px solid var(--prim-acc);
-  border-radius: 0.25rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  justify-content: center;
-}
-
-.goal-heading {
-  font-weight: bold;
-  font-size: 1.25rem;
-  font-style: italic;
-  text-transform: capitalize;
-
-  display: flex;
-  align-items: space-evenly;
-  justify-content: space-between;
-}
-
-.goal-title {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.goal-actions {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.goal-action-btn {
-  padding: 0.5rem;
+  @include mixins.flex(row, space-between, flex-start);
 }
 
 .goal-action-icon {
-
   font-size: 1.5rem;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
-.goal-details {
-  margin-left: 2rem;
-} */

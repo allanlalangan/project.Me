@@ -17,7 +17,7 @@ import GoalItem from './GoalItem/GoalItem';
 const Goals = ({ gridItem }) => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
-  const { goals, isError, isLoading, message } = useSelector(
+  const { goals, isSuccess, isError, isLoading, message } = useSelector(
     (state) => state.goals
   );
 
@@ -33,7 +33,7 @@ const Goals = ({ gridItem }) => {
   return (
     <ul className={`${gridItem} ${styles['goals-list']}`}>
       {(isLoading || isError) && <p>{message}</p>}
-      {goals?.length === 0 ? (
+      {isSuccess && goals.length === 0 ? (
         <p>No Goals</p>
       ) : (
         <>
