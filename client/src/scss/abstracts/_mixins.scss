@@ -40,6 +40,18 @@
   border-radius: $borderRad;
   padding: $paddingY $paddingX;
 }
+@mixin outlined-button(
+  $width,
+  $borderColor,
+  $borderRad: null,
+  $paddingY: 1rem,
+  $paddingX: 2rem
+) {
+  color: $borderColor;
+  border: $width $borderColor solid;
+  border-radius: $borderRad;
+  padding: $paddingY $paddingX;
+}
 
 @mixin shadow($offsetX, $offsetY, $blur, $spread, $alpha) {
   box-shadow: $offsetX $offsetY $blur $spread rgba(0, 0, 0, $alpha);
