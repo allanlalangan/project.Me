@@ -8,7 +8,7 @@ const Dashboard_page = () => {
   const user = useSelector((state) => state.auth.user);
   useEffect(() => {
     if (!user) {
-      redirect('/');
+      redirect('/login');
     }
   }, [user, redirect]);
   return (
