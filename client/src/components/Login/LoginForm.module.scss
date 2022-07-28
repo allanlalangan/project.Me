@@ -1,50 +1,18 @@
-/* .form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 75%;
+@use '../../scss/abstracts/colors' as colors;
+@use '../../scss/abstracts/mixins' as mixins;
+@use '../../scss/abstracts/variables' as var;
+
+.form {
+  background-color: colors.$bg;
+  border-radius: 0.5rem;
+  padding: 3rem;
 }
 
 .login-heading {
-  color: var(--prim-color);
-}
-
-.form-fieldset {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 1rem;
-  border: 1px solid;
-  border-radius: 1rem 0 1rem 0;
-  border-color: var(--prim-acc);
-}
-
-.label {
-  display: none;
-}
-
-.form-controls {
-  padding: 1rem;
-}
-
-.email-field {
-  border-radius: 0.5rem 0 0 0;
-}
-
-.pass-field {
-  border-radius: 0 0 0.5rem 0;
+  margin-bottom: 0.5rem;
 }
 
 .login-btn {
-  background-color: transparent;
-  border: 1px solid var(--prim-acc);
-  border-radius: 0.5rem 0 0.5rem 0;
-  padding: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-} */
+  margin-top: 1rem;
+  @include mixins.filled-button(colors.$prim, 0.5rem);
+}

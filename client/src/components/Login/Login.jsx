@@ -35,12 +35,16 @@ const Login = () => {
   }, [user, isError, isSuccess, message, dispatch, redirect]);
 
   return (
-    <section className={styles['login-container']}>
+    <section className={styles['container']}>
       <aside className={styles['login-banner']}></aside>
       {isLoading ? (
         <h2 className={styles['register-msg']}>Loading</h2>
       ) : (
         <>
+          <aside className={styles['heading']}>
+            <p>This super secret to-do app requires credentials</p>
+            <p>Login or create an account to start tracking your goals</p>
+          </aside>
           <LoginForm />
         </>
       )}

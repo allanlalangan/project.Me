@@ -3,10 +3,10 @@ import styles from './InputControlText.module.scss';
 
 const InputControlText = (props) => {
   return (
-    <div>
+    <div className={styles.container}>
       <label
         htmlFor={props.for}
-        className={styles[`input-${props.type}-label`]}
+        className={`${styles.label} ${styles[`input-${props.type}-label`]}`}
       >
         {props.label}
       </label>
