@@ -1,7 +1,7 @@
 const Home_page = () => {
   return (
     <>
-      <h1>Please Login</h1>
+      <h1>Dashboard</h1>
     </>
   );
 };

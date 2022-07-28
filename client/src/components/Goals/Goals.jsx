@@ -1,5 +1,5 @@
 // IMPORT
-
+import { useNavigate } from 'react-router-dom';
 // hooks
 import { useEffect } from 'react';
 // redux
@@ -16,10 +16,15 @@ import GoalItem from './GoalItem/GoalItem';
 
 const Goals = ({ gridItem }) => {
   const dispatch = useDispatch();
+  const redirect = useNavigate();
   const { user } = useSelector((state) => state.auth);
   const { goals, isSuccess, isError, isLoading, message } = useSelector(
     (state) => state.goals
   );
+
+  useEffect(() => {
+    !user && redirect('/login');
+  }, []);
 
   useEffect(() => {
     dispatch(getGoals());
