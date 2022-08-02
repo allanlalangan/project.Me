@@ -29,14 +29,9 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-@mixin filled-button(
-  $backgroundColor,
-  $borderRad: null,
-  $paddingY: 1rem,
-  $paddingX: 2rem
-) {
+@mixin filled-button($borderRad: null, $paddingY: 1rem, $paddingX: 2rem) {
   color: colors.$contrastText;
-  background-color: $backgroundColor;
+  background: map-get(colors.$gradient, 'button');
   border-radius: $borderRad;
   padding: $paddingY $paddingX;
 }

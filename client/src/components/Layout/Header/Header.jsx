@@ -16,7 +16,10 @@ const Header = ({ gridItem }) => {
     <header className={`${gridItem} ${styles['main-header']}`}>
       <section className={styles['logo']}>
         <Link to='/'>
-          <h1 className={styles['main-title']}>project.Me</h1>
+          <h1 className={styles['main-title']}>
+            <span className={styles.__project}>project</span>.
+            <span className={styles.me}>Me</span>
+          </h1>
         </Link>
       </section>
     </header>

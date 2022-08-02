@@ -12,6 +12,13 @@
 .logo {
   grid-column: 1 / 4;
   @include mixins.flex(column, center, center);
+
+  .__project {
+    color: colors.$prim;
+  }
+  .me {
+    color: colors.$sec;
+  }
 }
 
 .navbar {
