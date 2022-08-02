@@ -39,7 +39,7 @@ const Goals = ({ gridItem }) => {
     <ul className={`${gridItem} ${styles['goals-list']}`}>
       {(isLoading || isError) && <p>{message}</p>}
       {isSuccess && goals.length === 0 ? (
-        <p>No Goals</p>
+        <p>Hey, loser! You don't have any goals!</p>
       ) : (
         <>
           {goals.map((goal) => (

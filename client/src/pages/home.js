@@ -1,4 +1,14 @@
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
 const Home_page = () => {
+  const { user } = useSelector((state) => state.auth);
+  const redirect = useNavigate();
+  useEffect(() => {
+    user && redirect('/dashboard');
+  }, []);
+
   return (
     <>
       <h1>Home</h1>

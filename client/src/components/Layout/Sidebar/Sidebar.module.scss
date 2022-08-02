@@ -12,10 +12,11 @@
 .links {
   width: 100%;
   padding: 1rem 0;
-  .links__link {
+  .link {
     @include mixins.flex(column, center, center);
     width: 100%;
     margin: auto;
+    margin-bottom: 1rem;
   }
 }
 .goals-button {
