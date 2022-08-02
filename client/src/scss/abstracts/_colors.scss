@@ -1,5 +1,5 @@
-$prim: hsl(240, 75%, 60%);
-$sec: hsl(164, 100%, 36%);
+$sec: hsl(230, 65%, 40%);
+$prim: hsl(190, 80%, 45%);
 $ter: hsl(345, 75%, 60%);
 // $ter: hsl(205, 60%, 60%);
 $text: hsl(220, 25%, 15%);
@@ -15,6 +15,10 @@ $divider: hsl(215, 75%, 80%);
 $success: hsl(140, 65%, 65%);
 $error: hsl(0, 75%, 60%);
 $info: hsl(200, 65%, 65%);
+
+$gradient: (
+  'button': linear-gradient(87deg, $prim 0%, $sec 85%),
+);
 
 $gradientBg: linear-gradient(
   30deg,
