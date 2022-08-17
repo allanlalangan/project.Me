@@ -45,9 +45,6 @@ const Navbar = ({ gridItem }) => {
         {user && (
           <>
             <li>
-              <Link to='/'>Settings</Link>
-            </li>
-            <li>
               <button onClick={logoutHandler} className={styles['logout-btn']}>
                 Logout
               </button>
