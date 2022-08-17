@@ -43,11 +43,6 @@ const Register = () => {
       ) : (
         <>
           <h2 className={styles['register-heading']}>Register New User</h2>
-          <p className={styles['register-message']}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            blanditiis suscipit culpa tempore eaque rem. Expedita, quod quia
-            assumenda eaque ipsa rerum? Dolorum, vero dolorem!
-          </p>
           <RegisterForm />
         </>
       )}

@@ -14,5 +14,5 @@
 
 .login-btn {
   margin-top: 1rem;
-  @include mixins.filled-button(colors.$prim, 0.5rem);
+  @include mixins.filled-button(0.5rem);
 }

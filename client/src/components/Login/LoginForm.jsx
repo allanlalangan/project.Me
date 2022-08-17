@@ -16,7 +16,7 @@ const LoginForm = () => {
     <form onSubmit={handleLogin} className={styles.form}>
       <h2 className={styles['login-heading']}>User Login</h2>
 
-      <fieldset className={styles['form-fieldset']}>
+      <fieldset className={styles['fieldset']}>
         <div className={styles['form-controls']}>
           <InputControlText
             type='email'

@@ -3,6 +3,7 @@
 @use '../../scss/abstracts/variables' as var;
 
 .container {
+  width: 100%;
   @include mixins.flex(row, space-between, center);
   margin-top: 0.5rem;
 }

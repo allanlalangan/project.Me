@@ -1,23 +1,20 @@
-/* .form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+@use '../../scss/abstracts/colors' as colors;
+@use '../../scss/abstracts/mixins' as mixins;
+@use '../../scss/abstracts/variables' as var;
+
+.form {
+  background-color: colors.$bg;
+  border-radius: 0.5rem;
+  padding: 3rem;
+  @include mixins.flex(column, center, flex-start);
 }
 
 .form-fieldset {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-
+  @include mixins.flex(column, center, flex-start);
 
   border-radius: 1rem;
   border-color: var(--prim-acc);
 }
-
 
 .name-field {
   border-radius: 0.25rem 0.25rem 0 0;
@@ -26,15 +23,11 @@
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-
-.register-btn {
-  border-color: var(--sec-color);
-}
-
 .create-user-btn {
+  margin-top: 1rem;
   border-radius: 0.5rem;
   padding: 1rem;
-  text-transform: uppercase;
   letter-spacing: 1px;
+  @include mixins.filled-button(0.5rem);
   font-weight: 400;
-} */
+}
