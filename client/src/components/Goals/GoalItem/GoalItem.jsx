@@ -13,11 +13,16 @@ const GoalItem = (props) => {
   const onDelete = (e) => {
     dispatch(deleteGoal(props.id));
   };
+
+  const onCheck = (e) => {
+    console.log(props.id);
+  };
   return (
     <li className={styles['goal-item']}>
-      <div className={`${styles['goal-heading']}`}>
+      <article className={`${styles['goal-heading']}`}>
         <p className={`${styles['goal-title']}`}>{props.title}</p>
-      </div>
+        <input type='checkbox' name='status' id='status' onChange={onCheck} />
+      </article>
       <aside className={`${styles['goal-actions']}`}>
         <button
           onClick={() => console.log(props.id)}
