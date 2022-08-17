@@ -1,27 +1,27 @@
-const express = require('express')
-const dotenv = require('dotenv').config()
-const { connectDB } = require('./config/db')
+const express = require('express');
+const dotenv = require('dotenv').config();
+const { connectDB } = require('./config/db');
 
 // SERVER START
-const app = express()
-const port = process.env.PORT
+const app = express();
+const port = process.env.PORT;
 app.listen(port, () => {
-  console.log(`server on port ${port}`)
-})
+  console.log(`server on port ${port}`);
+});
 
 // CONNECT TO DATABASE
-connectDB()
+connectDB();
 
 // PARSE BODY MIDDLEWARE
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // ROUTES
-app.use('/api/goals', require('./routes/goalsRoutes'))
-app.use('/api/users', require('./routes/usersRoutes'))
-app.use('/api/tasks', require('./routes/tasksRoutes'))
+app.use('/api/goals', require('./routes/goalsRoutes'));
+app.use('/api/users', require('./routes/usersRoutes'));
+app.use('/api/tasks', require('./routes/tasksRoutes'));
 
 // FALLBACK ROUTE
 app.use('*', (req, res) => {
-  res.status(404).json({ error: 'not found' })
-})
+  res.status(404).json({ error: 'not found' });
+});
