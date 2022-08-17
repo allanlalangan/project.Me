@@ -49,6 +49,22 @@ const addGoal = createAsyncThunk(
   }
 );
 
+const updateGoal = createAsyncThunk('goals/delete', async (id, thunkAPI) => {
+  try {
+    const token = thunkAPI.getState().auth.user.token;
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+
+    const resp = await axios.put(`/api/goals/${id}`, config);
+    return resp.data;
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.toString());
+  }
+});
+
 const deleteGoal = createAsyncThunk('goals/delete', async (id, thunkAPI) => {
   try {
     const token = thunkAPI.getState().auth.user.token;
@@ -59,6 +75,7 @@ const deleteGoal = createAsyncThunk('goals/delete', async (id, thunkAPI) => {
     };
 
     const resp = await axios.delete(`/api/goals/${id}`, config);
+    console.log(resp.data);
     return resp.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.toString());
