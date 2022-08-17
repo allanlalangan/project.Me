@@ -1,0 +1,16 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.form-control {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+}/*# sourceMappingURL=InputControlText.module.css.map */

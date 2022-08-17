@@ -1,0 +1,15 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.heading {
+  width: 100%;
+  font-size: 1.25rem;
+  padding-bottom: 2rem;
+}/*# sourceMappingURL=Login.module.css.map */

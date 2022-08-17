@@ -1,0 +1,43 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.header {
+  z-index: 10;
+}
+@media (min-width: 0em) {
+  .header {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+}
+
+.navbar {
+  z-index: 10;
+}
+@media (min-width: 0em) {
+  .navbar {
+    grid-column: 10/13;
+    grid-row: 1/2;
+  }
+}
+
+@media (min-width: 0em) {
+  .sidebar {
+    grid-column: 1/4;
+    grid-row: 2/13;
+  }
+}
+
+.page {
+  padding: 1rem;
+}
+@media (min-width: 0em) {
+  .page {
+    grid-column: 4/13;
+    grid-row: 2/13;
+  }
+}/*# sourceMappingURL=App.module.css.map */

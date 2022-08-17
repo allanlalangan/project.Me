@@ -1,0 +1,24 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.main-header {
+  width: 100%;
+  background-color: hsl(205deg, 60%, 90%);
+  display: grid;
+}
+
+.logo {
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo .__project {
+  color: hsl(190deg, 80%, 45%);
+}
+.logo .me {
+  color: hsl(230deg, 65%, 40%);
+}
+
+.navbar {
+  grid-column: 4/13;
+}/*# sourceMappingURL=Header.module.css.map */

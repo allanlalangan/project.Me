@@ -1,0 +1,20 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.backdrop {
+  position: "absolute";
+  top: 0;
+  left: 0;
+  width: "100vw";
+  height: "100vh";
+  background-color: "rgba(0, 0, 0, 0.75)";
+  z-index: 9998;
+}
+
+.window {
+  position: "absolute";
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 90%;
+  z-index: 9999;
+  border-radius: 2;
+}/*# sourceMappingURL=Modal.module.css.map */

@@ -1,0 +1,39 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.form {
+  background-color: hsl(205deg, 60%, 90%);
+  border-radius: 0.5rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 1rem;
+  border-color: var(--prim-acc);
+}
+
+.name-field {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.pass2-field {
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.create-user-btn {
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  letter-spacing: 1px;
+  color: hsl(230deg, 75%, 95%);
+  background: linear-gradient(87deg, hsl(190deg, 80%, 45%) 0%, hsl(230deg, 65%, 40%) 85%);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-weight: 400;
+}/*# sourceMappingURL=RegisterForm.module.css.map */

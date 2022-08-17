@@ -1,0 +1,49 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.container {
+  background-color: hsl(205deg, 60%, 90%);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.heading {
+  padding-bottom: 1rem;
+}
+
+.new-goal__fieldset {
+  padding: 1rem;
+  border: 1px solid hsl(190deg, 80%, 45%);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-goal__input {
+  width: 100%;
+  padding: 1rem;
+  color: var(--sec-color);
+  border: none;
+  border: 1px solid var(--prim-acc);
+  background-color: var(--prim-color);
+}
+
+.duedate {
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid var(--sec-color);
+}
+
+.notes {
+  width: 100%;
+  border: 1px solid var(--sec-color);
+}
+
+.add-goal__btn {
+  width: 100%;
+  margin-top: 1rem;
+  color: hsl(230deg, 75%, 95%);
+  background: linear-gradient(87deg, hsl(190deg, 80%, 45%) 0%, hsl(230deg, 65%, 40%) 85%);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+}/*# sourceMappingURL=NewGoal.module.css.map */

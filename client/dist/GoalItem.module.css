@@ -1,0 +1,19 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.goal-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.goal-action-icon {
+  font-size: 1.5rem;
+}/*# sourceMappingURL=GoalItem.module.css.map */

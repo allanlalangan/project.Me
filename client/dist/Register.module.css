@@ -1,0 +1,21 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  width: 75vw;
+  height: 75vh;
+}
+
+.register-heading {
+  color: var(--sec-color);
+}
+
+.register-message {
+  color: var(--prim-acc);
+}
+
+.loading-message {
+  color: var(--sec-color);
+}/*# sourceMappingURL=Register.module.css.map */
