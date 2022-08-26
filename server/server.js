@@ -5,7 +5,7 @@ const { connectDB } = require('./config/db');
 // SERVER START
 const app = express();
 const port = process.env.PORT;
-app.listen(port, () => {
+app.listen(port || 5000, () => {
   console.log(`server on port ${port}`);
 });
 
