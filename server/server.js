@@ -1,21 +1,20 @@
 const express = require('express');
-const cors = require('cors');
 const dotenv = require('dotenv').config();
 const { connectDB } = require('./config/db');
 
 // SERVER START
 const app = express();
 const port = process.env.PORT;
-// app.listen(port || 5000, () => {
-//   console.log(`server on port ${port}`);
-// });
-app.use(cors());
-// PARSE BODY MIDDLEWARE
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.listen(port, () => {
+  console.log(`server on port ${port}`);
+});
 
 // CONNECT TO DATABASE
 connectDB();
+
+// PARSE BODY MIDDLEWARE
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // ROUTES
 app.use('/api/goals', require('./routes/goalsRoutes'));
