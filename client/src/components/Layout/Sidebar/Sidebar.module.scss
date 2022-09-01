@@ -3,10 +3,16 @@
 @use '../../../scss/abstracts/variables' as var;
 
 .container {
-  height: 100%;
   background-color: colors.$bg;
 
-  // @include mixins.shadow(1px, 0, 5px, 1px, 0.25);
+  @include mixins.breakpoint('>=md') {
+    width: 30%;
+    position: absolute;
+    height: var.$height__main;
+  }
+  @include mixins.breakpoint('>=lg') {
+    width: 20%;
+  }
 }
 
 .links {

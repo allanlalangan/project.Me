@@ -4,9 +4,9 @@ import styles from './goals.module.scss';
 
 const Goals_page = () => {
   return (
-    <section className={styles['container']}>
-      <Goals gridItem={styles.goals} />
-      <NewGoal gridItem={styles['new-goal']} />
+    <section className={styles.section}>
+      <Goals />
+      <NewGoal />
     </section>
   );
 };

@@ -4,16 +4,22 @@
 
 .container {
   background-color: colors.$bg;
-  // @include mixins.flex(column, center, center);
   border-radius: 0.5rem;
   padding: 2rem;
-}
-
-.new-goal__form {
+  margin-bottom: 1rem;
+  @include mixins.breakpoint('>=md') {
+    margin-bottom: 0;
+    width: 60%;
+    height: 100%;
+  }
+  @include mixins.breakpoint('>=lg') {
+    // width: 50%;
+  }
 }
 
 .heading {
   padding-bottom: 1rem;
+  font-weight: 500;
 }
 
 .new-goal__fieldset {

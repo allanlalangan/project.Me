@@ -4,23 +4,39 @@
 
 .main-header {
   width: 100%;
+  padding: 0 1rem;
+
   background-color: colors.$bg;
-  // border-bottom: 2px solid colors.$sec;
-  display: grid;
-}
 
-.logo {
-  grid-column: 1 / 4;
-  @include mixins.flex(column, center, center);
-
-  .__project {
-    color: colors.$prim;
-  }
-  .me {
-    color: colors.$sec;
+  @include mixins.flex(row, space-between, center);
+  @include mixins.breakpoint('>=md') {
+    height: var.$height__header;
   }
 }
 
-.navbar {
-  grid-column: 4 / 13;
+.main-title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.__project {
+  color: colors.$prim;
+}
+.me {
+  color: colors.$sec;
+}
+
+.main-nav {
+  background-color: colors.$bg;
+}
+
+.main-nav ul {
+  height: 100%;
+  @include mixins.flex(row, space-around, center);
+}
+
+.links {
+  .__link {
+    padding: 0 1rem;
+  }
 }

@@ -36,18 +36,18 @@ const Goals = ({ gridItem }) => {
   }, [dispatch, user]);
 
   return (
-    <ul className={`${gridItem} ${styles['goals-list']}`}>
+    <section className={styles.container}>
       {(isLoading || isError) && <p>{message}</p>}
       {isSuccess && goals.length === 0 ? (
         <p>Hey, loser! You don't have any goals!</p>
       ) : (
-        <>
+        <ul>
           {goals.map((goal) => (
             <GoalItem id={goal._id} key={goal._id} title={goal.title} />
           ))}
-        </>
+        </ul>
       )}
-    </ul>
+    </section>
   );
 };
 

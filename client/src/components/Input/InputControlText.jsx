@@ -11,7 +11,7 @@ const InputControlText = (props) => {
         {props.label}
       </label>
       <input
-        className={`${styles['form-control']} ${props.className}`}
+        className={styles.input}
         type={props.type}
         id={props.for}
         name={props.for}

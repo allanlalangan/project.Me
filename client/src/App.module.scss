@@ -1,38 +1,20 @@
 @use './scss/abstracts/mixins' as mixins;
-
-.container {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-}
-
-.header {
-  z-index: 10;
-  @include mixins.breakpoint('>=xs') {
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
-  }
-}
-.navbar {
-  z-index: 10;
-  @include mixins.breakpoint('>=xs') {
-    grid-column: 10 / 13;
-    grid-row: 1 / 2;
-  }
-}
-.sidebar {
-  @include mixins.breakpoint('>=xs') {
-    grid-column: 1 / 4;
-    grid-row: 2 / 13;
-  }
-}
+@use './scss/abstracts/variables' as var;
 
 .page {
   padding: 1rem;
 
-  @include mixins.breakpoint('>=xs') {
-    grid-column: 4 / 13;
-    grid-row: 2 / 13;
+  @include mixins.breakpoint('>=sm') {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  @include mixins.breakpoint('>=md') {
+    margin-left: 30%;
+    width: 70%;
+    height: var.$height__main;
+  }
+  @include mixins.breakpoint('>=lg') {
+    margin-left: 20%;
+    width: 80%;
   }
 }

@@ -3,10 +3,15 @@
 @use '../../scss/abstracts/mixins' as mixins;
 
 .container {
-}
-
-.goals-list {
+  height: 100%;
+  margin-bottom: 1rem;
   background-color: colors.$bg;
   padding: 1rem;
   border-radius: 0.5rem;
+
+  @include mixins.breakpoint('>=md') {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    width: 40%;
+  }
 }

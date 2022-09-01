@@ -16,9 +16,8 @@ const App = () => {
   return (
     <div className={styles['container']}>
       <Router>
-        <Header gridItem={styles.header} />
-        <Navbar gridItem={styles.navbar} />
-        <Sidebar gridItem={styles.sidebar} />
+        <Header />
+        <Sidebar />
         <main className={styles.page}>
           <Routes>
             <Route path='/' element={<HomePage />} />

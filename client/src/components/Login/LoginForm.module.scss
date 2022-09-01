@@ -3,9 +3,12 @@
 @use '../../scss/abstracts/variables' as var;
 
 .form {
+  // width: 100%;
   background-color: colors.$bg;
   border-radius: 0.5rem;
-  padding: 3rem;
+  padding: 2rem;
+
+  @include mixins.flex(column, center, center);
 }
 
 .login-heading {
@@ -13,6 +16,7 @@
 }
 
 .login-btn {
+  margin: auto;
   margin-top: 1rem;
   @include mixins.filled-button(0.5rem);
 }

@@ -24,7 +24,6 @@ const LoginForm = () => {
             for='email'
             label='Email'
             placeholder='Enter email'
-            className={`${styles['input-field']}`}
           />
           <InputControlText
             type='password'
@@ -32,13 +31,12 @@ const LoginForm = () => {
             for='password'
             label='Password'
             placeholder='Enter password'
-            className={`${styles['input-field']}`}
           />
         </div>
-        <button className={`${styles['login-btn']}`} type='submit'>
-          Login
-        </button>
       </fieldset>
+      <button className={`${styles['login-btn']}`} type='submit'>
+        Login
+      </button>
     </form>
   );
 };

@@ -36,7 +36,6 @@ const Login = () => {
 
   return (
     <section className={styles['container']}>
-      <aside className={styles['login-banner']}></aside>
       {isLoading ? (
         <h2 className={styles['register-msg']}>Loading</h2>
       ) : (

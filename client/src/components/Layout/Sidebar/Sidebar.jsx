@@ -2,11 +2,11 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styles from './Sidebar.module.scss';
 
-const Sidebar = ({ gridItem }) => {
+const Sidebar = () => {
   const { user } = useSelector((state) => state.auth);
 
   return (
-    <section className={`${gridItem} ${styles.container}`}>
+    <section className={styles.container}>
       <ul className={styles.links}>
         {user && (
           <Link to='/dashboard'>
