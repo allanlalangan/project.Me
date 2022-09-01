@@ -6,11 +6,10 @@ import RegisterPage from './pages/register';
 import DashboardPage from './pages/dashboard';
 import GoalsPage from './pages/goals';
 
-import Header from './components/Layout/Header/Header';
-import Sidebar from './components/Layout/Sidebar/Sidebar';
+import Header from './components/Header/Header';
+import Sidebar from './components/Sidebar/Sidebar';
 
 import styles from './App.module.scss';
-import Navbar from './components/Layout/Header/Navbar';
 
 const App = () => {
   return (

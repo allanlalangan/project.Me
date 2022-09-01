@@ -1,5 +1,5 @@
 import Goals from '../components/Goals/Goals';
-import NewGoal from '../components/Goals/NewGoal/NewGoal';
+import NewGoal from '../components/NewGoal/NewGoal';
 import styles from './goals.module.scss';
 
 const Goals_page = () => {

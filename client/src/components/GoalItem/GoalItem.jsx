@@ -1,6 +1,6 @@
 // IMPORT
 import { useDispatch } from 'react-redux';
-import { deleteGoal } from '../../../features/goalsSlice';
+import { deleteGoal } from '../../features/goalsSlice';
 // styles and ui
 import styles from './GoalItem.module.scss';
 // icons

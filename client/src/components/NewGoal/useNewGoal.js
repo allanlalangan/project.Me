@@ -3,7 +3,7 @@
 import { useState } from 'react';
 // redux
 import { useDispatch } from 'react-redux';
-import { addGoal } from '../../../features/goalsSlice';
+import { addGoal } from '../../features/goalsSlice';
 
 ///
 

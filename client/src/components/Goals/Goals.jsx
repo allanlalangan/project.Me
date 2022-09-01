@@ -10,7 +10,7 @@ import styles from './Goals.module.scss';
 
 // custom components
 
-import GoalItem from './GoalItem/GoalItem';
+import GoalItem from '../GoalItem/GoalItem';
 
 ///
 

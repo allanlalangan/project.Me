@@ -5,11 +5,10 @@ import { Link, useNavigate } from 'react-router-dom';
 // styles and ui
 import styles from './Header.module.scss';
 // custom components
-import Navbar from './Navbar';
+
 // icons
-import { FcBiomass } from 'react-icons/fc';
 import { useDispatch, useSelector } from 'react-redux';
-import { logout, reset } from '../../../features/authSlice';
+import { logout, reset } from '../../features/authSlice';
 
 ///
 
