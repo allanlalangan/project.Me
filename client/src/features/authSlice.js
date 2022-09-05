@@ -16,7 +16,10 @@ const register = createAsyncThunk(
   'auth/register',
   async (formData, thunkAPI) => {
     try {
-      const response = await axios.post('/api/users', formData);
+      const response = await axios.post(
+        'https://projectme-srv.herokuapp.com/api/users',
+        formData
+      );
       if (response.data) {
         localStorage.setItem('user', JSON.stringify(response.data));
       }
@@ -29,7 +32,10 @@ const register = createAsyncThunk(
 
 const login = createAsyncThunk('auth/login', async (formData, thunkAPI) => {
   try {
-    const response = await axios.post('/api/users/login', formData);
+    const response = await axios.post(
+      'https://projectme-srv.herokuapp.com/api/users/login',
+      formData
+    );
     if (response.data) {
       localStorage.setItem('user', JSON.stringify(response.data));
     }
