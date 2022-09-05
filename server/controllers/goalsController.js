@@ -46,9 +46,11 @@ const updateGoal = async (req, res) => {
       new: true,
     });
 
+    const goals = await Goal.find({ user: req.user.id });
+
     res.status(200).json({
       message: `${req.user.name}'s goal updated`,
-      updatedGoal,
+      goals,
     });
   } catch (error) {
     res.status(500).send(error.message);
@@ -71,7 +73,7 @@ const deleteGoal = async (req, res) => {
 
     await goal.remove();
     res.status(200).json({
-      message: `${req.user.name}'s goals updated`,
+      message: `goal deleted`,
       deletedGoalID: req.params.id,
       goals: await Goal.find({ user: req.user.id }),
     });
