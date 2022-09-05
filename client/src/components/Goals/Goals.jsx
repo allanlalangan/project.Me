@@ -43,7 +43,12 @@ const Goals = ({ gridItem }) => {
       ) : (
         <ul>
           {goals.map((goal) => (
-            <GoalItem id={goal._id} key={goal._id} title={goal.title} />
+            <GoalItem
+              id={goal._id}
+              key={goal._id}
+              title={goal.title}
+              complete={goal.complete}
+            />
           ))}
         </ul>
       )}

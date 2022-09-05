@@ -1,6 +1,6 @@
 // IMPORT
 import { useDispatch } from 'react-redux';
-import { deleteGoal } from '../../features/goalsSlice';
+import { deleteGoal, updateGoal } from '../../features/goalsSlice';
 // styles and ui
 import styles from './GoalItem.module.scss';
 // icons
@@ -15,13 +15,19 @@ const GoalItem = (props) => {
   };
 
   const onCheck = (e) => {
-    console.log(props.id);
+    dispatch(updateGoal({ id: props.id, complete: e.target.checked }));
   };
   return (
     <li className={styles['goal-item']}>
       <article className={`${styles['goal-heading']}`}>
         <p className={`${styles['goal-title']}`}>{props.title}</p>
-        <input type='checkbox' name='status' id='status' onChange={onCheck} />
+        <input
+          type='checkbox'
+          name='status'
+          id='status'
+          onChange={onCheck}
+          checked={props.complete}
+        />
       </article>
       <aside className={`${styles['goal-actions']}`}>
         <button
