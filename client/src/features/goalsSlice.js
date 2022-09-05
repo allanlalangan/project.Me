@@ -18,10 +18,7 @@ const getGoals = createAsyncThunk('goals/getGoals', async (_, thunkAPI) => {
       },
     };
 
-    const resp = await axios.get(
-      'https://projectme-srv.herokuapp.com/api/goals',
-      config
-    );
+    const resp = await axios.get('/api/goals', config);
     return resp.data;
   } catch (error) {
     console.log('ERROR GETGOALS getGoals asyncThunk throw error');
@@ -44,11 +41,7 @@ const addGoal = createAsyncThunk(
         },
       };
 
-      const resp = await axios.post(
-        'https://projectme-srv.herokuapp.com/api/goals',
-        formData,
-        config
-      );
+      const resp = await axios.post('/api/goals', formData, config);
       return resp.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.toString());
@@ -56,44 +49,49 @@ const addGoal = createAsyncThunk(
   }
 );
 
-const updateGoal = createAsyncThunk('goals/delete', async (id, thunkAPI) => {
-  try {
-    const token = thunkAPI.getState().auth.user.token;
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
+const updateGoal = createAsyncThunk(
+  'goals/updateGoal',
+  async (goal, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user.token;
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
 
-    const resp = await axios.put(
-      `https://projectme-srv.herokuapp.com/api/goals/${id}`,
-      config
-    );
-    return resp.data;
-  } catch (error) {
-    return thunkAPI.rejectWithValue(error.toString());
+      const resp = await axios.put(
+        `/api/goals/${goal.id}`,
+        { complete: goal.complete },
+        config
+      );
+      console.log(resp.data);
+      return resp.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.toString());
+    }
   }
-});
+);
 
-const deleteGoal = createAsyncThunk('goals/delete', async (id, thunkAPI) => {
-  try {
-    const token = thunkAPI.getState().auth.user.token;
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
+const deleteGoal = createAsyncThunk(
+  'goals/deleteGoal',
+  async (id, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user.token;
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
 
-    const resp = await axios.delete(
-      `https://projectme-srv.herokuapp.com/api/goals/${id}`,
-      config
-    );
-    console.log(resp.data);
-    return resp.data;
-  } catch (error) {
-    return thunkAPI.rejectWithValue(error.toString());
+      const resp = await axios.delete(`/api/goals/${id}`, config);
+
+      return resp.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.toString());
+    }
   }
-});
+);
 
 const goalsSlice = createSlice({
   name: 'goals',
@@ -143,10 +141,23 @@ const goalsSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
+      })
+      .addCase(updateGoal.pending, (state, action) => {
+        state.isLoading = true;
+      })
+      .addCase(updateGoal.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.goals = action.payload.goals;
+      })
+      .addCase(updateGoal.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
       });
   },
 });
 
 export default goalsSlice.reducer;
 export const { reset } = goalsSlice.actions;
-export { getGoals, addGoal, deleteGoal };
+export { getGoals, addGoal, deleteGoal, updateGoal };
