@@ -16,32 +16,30 @@ const register = createAsyncThunk(
   'auth/register',
   async (formData, thunkAPI) => {
     try {
-      const response = await axios.post(
-        'https://projectme-srv.herokuapp.com/api/users',
-        formData
-      );
+      const response = await axios.post('/api/users', formData);
       if (response.data) {
         localStorage.setItem('user', JSON.stringify(response.data));
       }
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.toString());
+      const message =
+        error.response?.data?.message || error.message || error.toString();
+      return thunkAPI.rejectWithValue(message);
     }
   }
 );
 
 const login = createAsyncThunk('auth/login', async (formData, thunkAPI) => {
   try {
-    const response = await axios.post(
-      'https://projectme-srv.herokuapp.com/api/users/login',
-      formData
-    );
+    const response = await axios.post('/api/users/login', formData);
     if (response.data) {
       localStorage.setItem('user', JSON.stringify(response.data));
     }
     return response.data;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.toString());
+    const message =
+      error.response?.data?.message || error.message || error.toString();
+    return thunkAPI.rejectWithValue(message);
   }
 });
 
