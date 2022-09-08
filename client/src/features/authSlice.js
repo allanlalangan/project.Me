@@ -25,7 +25,9 @@ const register = createAsyncThunk(
       }
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.toString());
+      const message =
+        error.response?.data?.message || error.message || error.toString();
+      return thunkAPI.rejectWithValue(message);
     }
   }
 );
@@ -41,7 +43,9 @@ const login = createAsyncThunk('auth/login', async (formData, thunkAPI) => {
     }
     return response.data;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.toString());
+    const message =
+      error.response?.data?.message || error.message || error.toString();
+    return thunkAPI.rejectWithValue(message);
   }
 });
 

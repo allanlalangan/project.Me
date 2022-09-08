@@ -1,0 +1,21 @@
+@use '../scss/abstracts/colors' as colors;
+@use '../scss/abstracts/variables' as var;
+@use '../scss/abstracts/mixins' as mixins;
+
+.heading,
+.message,
+.call-to-action {
+  margin-bottom: 1rem;
+}
+
+.heading {
+  color: colors.$sec;
+}
+
+.message {
+  font-size: 1.5rem;
+}
+
+.call-to-action {
+  font-size: 1.25rem;
+}

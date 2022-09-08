@@ -1,11 +1,19 @@
-/* .dashboard-container {
+@use '../../scss/abstracts/colors' as colors;
+@use '../../scss/abstracts/mixins' as mixins;
+@use '../../scss/abstracts/variables' as var;
+
+.dashboard-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
-.dashboard-heading {
-  padding: 1rem;
-} */
+.heading {
+  color: colors.$sec;
+  margin-bottom: 1rem;
+}
+
+.welcome-msg {
+  font-size: 1.5rem;
+}
