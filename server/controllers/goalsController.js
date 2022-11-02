@@ -1,6 +1,6 @@
 // REQUIRE
-const Goal = require('../models/goalModel');
-const User = require('../models/userModel');
+const Goal = require('../models/Goal');
+const User = require('../models/User');
 
 // @desc Get goals
 // @route GET /api/goals
