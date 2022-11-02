@@ -1,5 +1,6 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const bcrypt = require('bcryptjs');
 
 const userSchema = Schema(
   {
@@ -12,6 +13,21 @@ const userSchema = Schema(
     password: { type: String, required: [true, 'Please enter an password'] },
   },
   { timestamps: true }
-)
+);
 
-module.exports = mongoose.model('User', userSchema)
+userSchema.statics.registerUser = async function (name, email, password) {
+  const existingUser = await this.findOne({ email });
+  if (existingUser) {
+    throw Error('Email is already registered');
+  }
+  const salt = await bcrypt.genSalt(10);
+  const hash = await bcrypt.hash(password, salt);
+  const user = this.create({
+    name,
+    email,
+    password: hash,
+  });
+  return user;
+};
+
+module.exports = mongoose.model('User', userSchema);
