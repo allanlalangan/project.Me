@@ -19,8 +19,8 @@ const getGoals = createAsyncThunk('goals/getGoals', async (_, thunkAPI) => {
     };
 
     const resp = await axios.get(
-      'http://localhost:5000/api/goals',
-      // 'https://projectme-srv.herokuapp.com/api/goals',
+      // 'http://localhost:5000/api/goals',
+      'https://projectme-srv.herokuapp.com/api/goals',
       config
     );
     return resp.data;
@@ -46,8 +46,8 @@ const addGoal = createAsyncThunk(
       };
 
       const resp = await axios.post(
-        'http://localhost:5000/api/goals',
-        // 'https://projectme-srv.herokuapp.com/api/goals',
+        // 'http://localhost:5000/api/goals',
+        'https://projectme-srv.herokuapp.com/api/goals',
         formData,
         config
       );
@@ -70,8 +70,8 @@ const updateGoal = createAsyncThunk(
       };
 
       const resp = await axios.put(
-        `http://localhost:5000/api/goals/${goal.id}`,
-        // `https://projectme-srv.herokuapp.com/api/goals/${goal.id}`,
+        // `http://localhost:5000/api/goals/${goal.id}`,
+        `https://projectme-srv.herokuapp.com/api/goals/${goal.id}`,
         { complete: goal.complete },
         config
       );
@@ -95,8 +95,8 @@ const deleteGoal = createAsyncThunk(
       };
 
       const resp = await axios.delete(
-        `http://localhost:5000/api/goals/${id}`,
-        // `https://projectme-srv.herokuapp.com/api/goals/${id}`,
+        // `http://localhost:5000/api/goals/${id}`,
+        `https://projectme-srv.herokuapp.com/api/goals/${id}`,
         config
       );
 
