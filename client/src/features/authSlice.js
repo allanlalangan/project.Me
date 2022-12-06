@@ -18,7 +18,7 @@ const register = createAsyncThunk(
     try {
       const response = await axios.post(
         // 'http://localhost:5000/api/users',
-        'https://projectme-srv.herokuapp.com/api/users',
+        'https://projectme-production.up.railway.app/api/users',
         formData
       );
       if (response.data) {
@@ -37,7 +37,7 @@ const login = createAsyncThunk('auth/login', async (formData, thunkAPI) => {
   try {
     const response = await axios.post(
       // 'http://localhost:5000/api/users/login',
-      'https://projectme-srv.herokuapp.com/api/users/login',
+      'https://projectme-production.up.railway.app/api/users/login',
       formData
     );
     if (response.data) {
